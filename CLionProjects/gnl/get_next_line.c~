@@ -1,0 +1,113 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amartyne <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/07/11 10:29:39 by amartyne          #+#    #+#             */
+/*   Updated: 2018/07/15 14:07:26 by amartyne         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "get_next_line.h"
+#include <stdio.h>
+int		find(char *arr, char c)
+{
+	int i;
+
+	i = 0;
+	while (arr[i])
+	{
+		if (arr[i] == c)
+			return (i);
+		i++;
+	}
+	return (-1);
+}
+
+int what_is_left(char **line, char **str)
+{
+	char	*temp;
+
+	if (find(*str, '\n') != -1)
+	{
+		*line = ft_strsub(*str, 0, find(*str, '\n'));
+		temp = *str;
+		*str = ft_strsub(*str, find(*str, '\n') + 1, ft_strlen(*str));
+		free(temp);
+		return (1);
+	}
+	else
+	{
+		*line = ft_strdup(*str);
+		ft_strdel(str);
+	}
+	return (0);
+}
+
+void	do_buff(int mark, char buf[BUFF_SIZE + 1], char **line, char **str)
+{
+    char	*temp;
+
+	if (mark == 1)
+	{
+		if (!*line)
+			*line = ft_strsub(buf, 0, find(buf, '\n'));
+		else
+		{
+			temp = ft_strsub(buf, 0, find(buf, '\n'));
+			*line = ft_strjoin(*line, temp);
+			free(temp);
+		}
+		*str = ft_strsub(buf, find(buf, '\n') + 1, ft_strlen(buf));
+	}
+	else if (mark == 2)
+	{
+		if (!*line)
+			*line = ft_strsub(buf, 0, ft_strlen(buf));
+		else
+			*line = ft_strjoin(*line, buf);
+	}
+}
+
+int		get_next_line(const int fd, char **line)
+{
+	static t_list	*str;
+	int				ret;
+	char			buf[BUFF_SIZE + 1];
+    t_list			*temp;
+
+	temp = str;
+	if (line == NULL)
+		return (-1);
+	while (temp && (int)temp->content_size != fd)
+		temp = temp->next;
+	if (!temp)
+	{
+		temp = ft_lstnew(0, 0);
+		temp->content_size = fd;
+		ft_lstadd(&str, temp);
+	}
+	*line = NULL;
+	if (temp->content)
+		if (what_is_left(line, (char**)&(temp->content)) == 1)
+			return (1);
+	ft_bzero(buf, BUFF_SIZE + 1);
+	while ((ret = read(fd, buf, BUFF_SIZE)) > 0)
+	{
+		if (find(buf, '\n') != -1) // \n in buf
+		{
+			do_buff(1, buf, line, (char**)&(temp->content));
+			return (1);
+		}
+		else
+			do_buff(2, buf, line, (char**)&(temp->content));
+		if (ret != BUFF_SIZE)
+			return (1);
+		ft_bzero(buf, BUFF_SIZE + 1);
+	}
+    if (!ret && line && *line && **line)
+		return (1);
+	return (ret);
+}
