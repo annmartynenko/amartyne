@@ -123,6 +123,60 @@ ft_printf/fast:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/build
 .PHONY : ft_printf/fast
 
+extra_fun.o: extra_fun.c.o
+
+.PHONY : extra_fun.o
+
+# target to build an object file
+extra_fun.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/extra_fun.c.o
+.PHONY : extra_fun.c.o
+
+extra_fun.i: extra_fun.c.i
+
+.PHONY : extra_fun.i
+
+# target to preprocess a source file
+extra_fun.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/extra_fun.c.i
+.PHONY : extra_fun.c.i
+
+extra_fun.s: extra_fun.c.s
+
+.PHONY : extra_fun.s
+
+# target to generate assembly for a file
+extra_fun.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/extra_fun.c.s
+.PHONY : extra_fun.c.s
+
+ft_itoa_base.o: ft_itoa_base.c.o
+
+.PHONY : ft_itoa_base.o
+
+# target to build an object file
+ft_itoa_base.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_itoa_base.c.o
+.PHONY : ft_itoa_base.c.o
+
+ft_itoa_base.i: ft_itoa_base.c.i
+
+.PHONY : ft_itoa_base.i
+
+# target to preprocess a source file
+ft_itoa_base.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_itoa_base.c.i
+.PHONY : ft_itoa_base.c.i
+
+ft_itoa_base.s: ft_itoa_base.c.s
+
+.PHONY : ft_itoa_base.s
+
+# target to generate assembly for a file
+ft_itoa_base.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_itoa_base.c.s
+.PHONY : ft_itoa_base.c.s
+
 ft_printf.o: ft_printf.c.o
 
 .PHONY : ft_printf.o
@@ -149,6 +203,33 @@ ft_printf.s: ft_printf.c.s
 ft_printf.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf.c.s
 .PHONY : ft_printf.c.s
+
+ft_putunsnbr.o: ft_putunsnbr.c.o
+
+.PHONY : ft_putunsnbr.o
+
+# target to build an object file
+ft_putunsnbr.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_putunsnbr.c.o
+.PHONY : ft_putunsnbr.c.o
+
+ft_putunsnbr.i: ft_putunsnbr.c.i
+
+.PHONY : ft_putunsnbr.i
+
+# target to preprocess a source file
+ft_putunsnbr.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_putunsnbr.c.i
+.PHONY : ft_putunsnbr.c.i
+
+ft_putunsnbr.s: ft_putunsnbr.c.s
+
+.PHONY : ft_putunsnbr.s
+
+# target to generate assembly for a file
+ft_putunsnbr.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_putunsnbr.c.s
+.PHONY : ft_putunsnbr.c.s
 
 main.o: main.c.o
 
@@ -177,6 +258,60 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/main.c.s
 .PHONY : main.c.s
 
+number.o: number.c.o
+
+.PHONY : number.o
+
+# target to build an object file
+number.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/number.c.o
+.PHONY : number.c.o
+
+number.i: number.c.i
+
+.PHONY : number.i
+
+# target to preprocess a source file
+number.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/number.c.i
+.PHONY : number.c.i
+
+number.s: number.c.s
+
+.PHONY : number.s
+
+# target to generate assembly for a file
+number.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/number.c.s
+.PHONY : number.c.s
+
+unicode.o: unicode.c.o
+
+.PHONY : unicode.o
+
+# target to build an object file
+unicode.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/unicode.c.o
+.PHONY : unicode.c.o
+
+unicode.i: unicode.c.i
+
+.PHONY : unicode.i
+
+# target to preprocess a source file
+unicode.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/unicode.c.i
+.PHONY : unicode.c.i
+
+unicode.s: unicode.c.s
+
+.PHONY : unicode.s
+
+# target to generate assembly for a file
+unicode.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/unicode.c.s
+.PHONY : unicode.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +321,27 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ft_printf"
+	@echo "... extra_fun.o"
+	@echo "... extra_fun.i"
+	@echo "... extra_fun.s"
+	@echo "... ft_itoa_base.o"
+	@echo "... ft_itoa_base.i"
+	@echo "... ft_itoa_base.s"
 	@echo "... ft_printf.o"
 	@echo "... ft_printf.i"
 	@echo "... ft_printf.s"
+	@echo "... ft_putunsnbr.o"
+	@echo "... ft_putunsnbr.i"
+	@echo "... ft_putunsnbr.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... number.o"
+	@echo "... number.i"
+	@echo "... number.s"
+	@echo "... unicode.o"
+	@echo "... unicode.i"
+	@echo "... unicode.s"
 .PHONY : help
 
 

@@ -8,4 +8,9 @@ add_executable(ft_printf
         ft_printf.h
         main.c
         Makefile
-        libft)
+        libft
+        extra_fun.c
+        number.c
+        ft_itoa_base.c
+        ft_putunsnbr.c
+        unicode.c)

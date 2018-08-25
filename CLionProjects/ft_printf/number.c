@@ -14,33 +14,55 @@
 
 int number(char *format, int i, va_list ap)
 {
-	int num;
-
-	if (format[i] == '%' && (format[i + 1] == 'd' || format[i] == 'i'))
+	if (format[i] == '%' && (format[i + 1] == 'd' || format[i + 1] == 'i'))
 	{
 		i++;
-		num = va_arg(ap, int);
-		ft_putnbr(num);
+		ft_putnbr(va_arg(ap, int));
+	}
+	if (format[i] == '%' && format[i + 1] == 'o')
+	{
+		i++;
+		ft_putstr(ft_itoa_base(va_arg(ap, int), 8));
+	}
+	if (format[i] == '%' && format[i + 1] == 'x')
+	{
+		i++;
+		ft_putstr(ft_itoa_base(va_arg(ap, int), 16));
+	}
+	if (format[i] == '%' && format[i + 1] == 'X')
+	{
+		i++;
+		ft_putstr(char_up(ft_itoa_base(va_arg(ap, int), 16)));
+	}
+	if (format[i] == '%' && format[i + 1] == 'u')
+	{
+		i++;
+		ft_putunsnbr(va_arg(ap, unsigned long int));
 	}
 	return (i);
 }
 
 int word(char *format, int i, va_list ap)
 {
-	char *string;
-	char c;
-
 	if(format[i] == '%' && format[i + 1] == 's')
 	{
 		i++;
-		string = va_arg(ap, char*);
-		ft_putstr(string);
+		ft_putstr(va_arg(ap, char*));
 	}
 	if(format[i] == '%' && format[i + 1] == 'c')
 	{
 		i++;
-		c = va_arg(ap, int);
-		ft_putchar(c);
+		ft_putchar(va_arg(ap, int));
+	}
+	if(format[i] == '%' && format[i + 1] == 'p')
+	{
+		i++;
+		ft_putstr(ft_itoa_base(va_arg(ap, long long), 16));
+	}
+	if(format[i] == '%' && format[i + 1] == 'C')
+	{
+		i++;
+		unicode(va_arg(ap, wchar_t));
 	}
 	return(i);
 }

@@ -12,7 +12,7 @@
 
 NAME = ft_printf
 
-SRC = ft_printf.c main.c number.c
+SRC = ft_printf.c main.c number.c ft_itoa_base.c ft_putunsnbr.c extra_fun.c unicode.c
 
 FLAGS = -Wall -Wextra -Werror
 

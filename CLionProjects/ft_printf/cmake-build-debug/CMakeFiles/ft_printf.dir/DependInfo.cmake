@@ -4,8 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/Users/amartyne/CLionProjects/ft_printf/extra_fun.c" "/Users/amartyne/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/extra_fun.c.o"
+  "/Users/amartyne/CLionProjects/ft_printf/ft_itoa_base.c" "/Users/amartyne/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_itoa_base.c.o"
   "/Users/amartyne/CLionProjects/ft_printf/ft_printf.c" "/Users/amartyne/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_printf.c.o"
+  "/Users/amartyne/CLionProjects/ft_printf/ft_putunsnbr.c" "/Users/amartyne/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_putunsnbr.c.o"
   "/Users/amartyne/CLionProjects/ft_printf/main.c" "/Users/amartyne/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/main.c.o"
+  "/Users/amartyne/CLionProjects/ft_printf/number.c" "/Users/amartyne/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/number.c.o"
+  "/Users/amartyne/CLionProjects/ft_printf/unicode.c" "/Users/amartyne/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/unicode.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

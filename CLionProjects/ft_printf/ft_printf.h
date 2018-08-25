@@ -19,13 +19,18 @@
 # include <stdarg.h>
 # include "libft/libft.h"
 
-//typedef struct p_list
+//typedef struct s_list
 //{
 //	char type;
 //	void *f;
-//};
+//}				t_list;
+void ft_putunsnbr(unsigned long int n);
+char *ft_itoa_base(long long int n, int base);
 int word(char *format, int i, va_list ap);
 int number(char *format, int i, va_list ap);
 int ft_printf(char *format, ...);
+char *char_up(char *str);
+int count_bin(unsigned int numb);
+void unicode(wchar_t numb);
 
 #endif
