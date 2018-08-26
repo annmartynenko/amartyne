@@ -26,3 +26,15 @@ char *char_up(char *str)
 	}
 	return (str);
 }
+
+void uni_str(wchar_t *arr)
+{
+	int i;
+
+	i = 0;
+	while (arr[i])
+	{
+		unicode(arr[i]);
+		i++;
+	}
+}

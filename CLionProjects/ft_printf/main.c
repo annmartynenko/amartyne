@@ -17,10 +17,18 @@ int	main()
 {
 	setlocale(LC_ALL, "");
 	wchar_t k1;
-	k1 = 58885;
+	int numb = -127;
+	k1 = 945;
+	wchar_t *r;
+	int 	s[5] = {2222, 2222, 945, 0, 3000};
 
-	ft_printf("%d\n", count_bin(k1));
-	printf("original %C. \n", k1);
-	ft_printf("ft %C. \n", k1);
+	r = (wchar_t*)malloc(sizeof(wchar_t) * 4);
+	r[0] = 167;
+	r[1] = 12587;
+	r[2] = 4587;
+	r[3] = '\0';
+	//ft_printf("%d\n", count_bin(k1));
+	printf("original:%S, %-d. \n", s, numb);
+	ft_printf("ft      :%S, %-d. \n", s, numb);
 	return (0);
 }
