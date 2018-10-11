@@ -34,8 +34,6 @@ void	ft_putnumber(long int n, a_struct flags, int *len_res)
 	len = 0;
 	len = a_len(n, 10, len, &j);
 	if_flags(flags, len, len_res);
-	if (n > 4294967295)
-		
 	if (n == -2147483648)
 	{
 		n = n % 1000000000;

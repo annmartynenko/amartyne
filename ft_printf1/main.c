@@ -78,8 +78,10 @@ int	main()
 //	len2 = ft_printf("%-5%\n");
 //	len1 = printf("or:%-10x\n", 45);
 //	len2 = ft_printf("ft:%-10x\n", 45);
-	len1 = printf("%lx\n", 4294967296);
-	len2 = ft_printf("%lx\n", 4294967296);
+//	len1 = printf("%lx\n", 4294967296);
+//	len2 = ft_printf("%lx\n", 4294967296);
+	len1 = printf("%x\n", -42);
+	len2 = ft_printf("%x\n", -42);
 	printf("±must %d, my %d±\n", len1, len2);
 	return (0);
 }

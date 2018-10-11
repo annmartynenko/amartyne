@@ -70,6 +70,7 @@ void		ft_putnumber(long int n, a_struct flags, int *len_res);
 int			specifier(char *format, int *i, va_list ap, a_struct flags);
 int			valid(char format);
 void		not_spec(a_struct flags, int *len_res);
-int	ft_itoa_base_int(unsigned int n, unsigned int base, int letter, a_struct flags);
+int			ft_itoa_base_int(unsigned int n, unsigned int base, int letter, a_struct flags);
+int			ft_itoa_unslong(unsigned long n, unsigned long base, int letter, a_struct flags);
 
 #endif
