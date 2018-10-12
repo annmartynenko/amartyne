@@ -25,7 +25,7 @@ void ft_putunslnbr(unsigned long int n, a_struct flags, int *len_res)
 		(*len_res) += ft_putchar((char)(n + '0'));
 	else
 	{
-		ft_putnbr(((char)n / 10), len_res);
+		ft_putnbr(n / 10, len_res);
 		(*len_res) += ft_putchar((char)(n % 10 + '0'));
 	}
 	if (flags.minus && flags.width > len)

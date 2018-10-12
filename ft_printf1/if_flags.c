@@ -24,11 +24,11 @@ void	if_flags(a_struct flags, int len, int *len_res)
 		(*len_res) += n_time((flags.width - len - 1), &ft_putchar, ' ');
 		(*len_res) += ft_putchar('+');
 	}
-	else if (flags.width > len && !flags.minus && !flags.nul &&\
-	len > flags.precision)
+	else if (flags.width > len && !flags.minus && !flags.nul && \
+    len > flags.precision)
 		*len_res += n_time((flags.width - len), &ft_putchar, ' ');
 	else if (flags.width > len && flags.precision && \
-	flags.width > flags.precision)
+    flags.width > flags.precision)
 	{
 		(*len_res) += n_time((flags.width - flags.precision), &ft_putchar, ' ');
 		(*len_res) += n_time((flags.precision - len), &ft_putchar, '0');
@@ -54,8 +54,8 @@ void	if_flags(a_struct flags, int len, int *len_res)
 			(*len_res) += ft_putchar(' ');
 		(*len_res) += n_time((flags.precision - len), &ft_putchar, '0');
 	}
-	else if (flags.space)
+	else if (flags.space && flags.sp == 'd')
 		(*len_res) += ft_putchar(' ');
-	else if (flags.plus)
+	else if (flags.plus && flags.sp == 'd')
 		(*len_res) += ft_putchar('+');
 }

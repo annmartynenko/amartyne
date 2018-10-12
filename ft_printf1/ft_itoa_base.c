@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 #include <stdio.h>
-int		a_len(long long n, int base, int len, long long *j)
+int		a_len(long long  n, int base, int len, long long *j)
 {
 	while (n / (*j) >= base)
 	{

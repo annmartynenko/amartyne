@@ -89,11 +89,11 @@ void unicode(wchar_t numb, a_struct flags, int mark, int *len_res)
 	value = (unsigned int) numb;
 	size = count_bin(value);
 	len = len_unco(size);
-	(*len_res) += len;
+	(*len_res) += len / size;
 	if (flags.width > len && !flags.minus && !flags.nul && mark == unco)
 		(*len_res) += n_time((flags.width - len), &ft_putchar, ' ');
 	if (size <= 7)
-		(*len_res) += ft_putchar(value);
+		ft_putchar(value);
 	else if (size <= 11)
 		two_bin(value);
 	else if (size <= 16)

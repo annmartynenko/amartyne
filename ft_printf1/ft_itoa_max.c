@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_unslong.c                                  :+:      :+:    :+:   */
+/*   ft_itoa_max.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amartyne <amartyne@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/11 18:12:01 by amartyne          #+#    #+#             */
-/*   Updated: 2018/10/11 18:12:03 by amartyne         ###   ########.fr       */
+/*   Created: 2018/10/12 13:47:56 by amartyne          #+#    #+#             */
+/*   Updated: 2018/10/12 13:47:57 by amartyne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdio.h>
 
-int	fill_uns(unsigned long base, unsigned long n, unsigned long j, int letter)
+int	fill_max(uintmax_t base, uintmax_t n, uintmax_t j, int letter)
 {
 	char	symbols[16];
 	int		len_res;
@@ -21,9 +21,9 @@ int	fill_uns(unsigned long base, unsigned long n, unsigned long j, int letter)
 	len_res = 0;
 	if (letter == 1)
 		ft_memcpy(symbols, "0123456789ABCDEF", 16);
-	else
+	else if (letter == 0)
 		ft_memcpy(symbols, "0123456789abcdef", 16);
-	if (letter == P)
+	else if (letter == P)
 	{
 		ft_putstr("0x");
 		len_res +=2;
@@ -38,7 +38,7 @@ int	fill_uns(unsigned long base, unsigned long n, unsigned long j, int letter)
 	return (len_res);
 }
 
-int		lenght_uns(unsigned long n, unsigned long base, unsigned long len, unsigned long  *j)
+int		lenght_max(uintmax_t n, uintmax_t base, unsigned long len, uintmax_t  *j)
 {
 	while (n / (*j) >= base)
 	{
@@ -49,19 +49,19 @@ int		lenght_uns(unsigned long n, unsigned long base, unsigned long len, unsigned
 	return (len);
 }
 
-int	ft_itoa_unslong(unsigned long n, unsigned long base, int letter, a_struct flags)
+int	ft_itoa_max(uintmax_t n, uintmax_t base, int letter, a_struct flags)
 {
 	unsigned int			len;
-	unsigned long	nb;
-	unsigned long	j;
+	uintmax_t	nb;
+	uintmax_t j;
 	int 		len_res;
 
 	j = 1;
 	len_res = 0;
 	nb = n;
-	len = lenght_uns(nb, base, 0, &j);
+	len = lenght_max(nb, base, 0, &j);
 	len_res += if_flags_ito(flags, len, base, letter);
-	len_res += fill_uns(base, nb, j, letter);
+	len_res += fill_max(base, nb, j, letter);
 	for_minus(flags, len, base, &len_res);
 	return (len_res);
 }

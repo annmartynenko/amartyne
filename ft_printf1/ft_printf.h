@@ -31,6 +31,7 @@ typedef struct		q_struct
 	char 			nul;
 	int				width;
 	int 			precision;
+	char 			sp;
 }					a_struct;
 void		*ft_memset(void *b, int c, size_t len);
 size_t		ft_strlen(const char *s);
@@ -72,5 +73,7 @@ int			valid(char format);
 void		not_spec(a_struct flags, int *len_res);
 int			ft_itoa_base_int(unsigned int n, unsigned int base, int letter, a_struct flags);
 int			ft_itoa_unslong(unsigned long n, unsigned long base, int letter, a_struct flags);
+int			ft_itoa_max(uintmax_t n, uintmax_t base, int letter, a_struct flags);
+void 		ft_putmax(intmax_t n, a_struct flags, int *len_res);
 
 #endif

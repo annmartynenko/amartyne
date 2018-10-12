@@ -41,12 +41,12 @@ int	ft_printf(char *format, ...)
 				len_res += ft_putchar('%');
 			else
 			{
+				//printf("form %c\n", format[i]);
 				flags = find_flag(format, &i, ap);
 				number(format[i],ap, flags, &len_res);
 				len_res += convert(format[i], ap, flags, 0);
 				word(format[i], ap, flags, &len_res);
 				len_res += specifier(format, &i, ap, flags);
-				//printf("char %c\n", format[i]);
 				if (format[i] == '%')
 				{
 					not_spec(flags, &len_res);
@@ -54,7 +54,7 @@ int	ft_printf(char *format, ...)
 					if (flags.width && flags.minus)
 						len_res += n_time((flags.width - 1), &ft_putchar, ' ');
 				}
-				//printf("wid %d\n", flags.width);
+				//printf("plus %d\n", flags.plus);
 			}
 			//printf("wid %d, min %d\n", flags.width, flags.minus);
 		}

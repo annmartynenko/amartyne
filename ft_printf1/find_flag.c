@@ -81,6 +81,7 @@ a_struct	create_struct()
 	flags.nul = 0;
 	flags.precision = 0;
 	flags.plus = 0;
+	flags.sp = 0;
 	return(flags);
 }
 
