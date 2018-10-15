@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
 void for_minus(a_struct flags, int len, int base, int *len_res)
 {
@@ -71,8 +72,11 @@ int print_nul(a_struct flags, int len, int base, int letter)
 			len_res += ft_putstr("0x");
 		else if (letter == up)
 			len_res += ft_putstr("0X");
-		len_res += n_time((flags.width - len - 2), &ft_putchar, '0');
+		if (!flags.minus)
+			len_res += n_time((flags.width - len - 2), &ft_putchar, '0');
 	}
+	else if (flags.precision)
+		len_res += n_time((flags.precision - len), &ft_putchar, '0');
 	else
 		len_res += n_time((flags.width - len), &ft_putchar, '0');
 	return (len_res);
@@ -107,11 +111,14 @@ int if_flags_ito(a_struct flags, int len, int base, int letter)
 
 	len_res = 0;
 	if (flags.width > len && flags.precision && \
-	flags.width > flags.precision && !flags.hash)
+	flags.width > flags.precision && !flags.hash && flags.precision >= len)
 	{
-		len_res += n_time((flags.width - flags.precision), &ft_putchar, ' ');
+		len_res += n_time((flags.width - flags.precision), &ft_putchar, '6');
 		len_res += n_time((flags.precision - len), &ft_putchar, '0');
 	}
+	else if (flags.width > len && flags.precision &&\
+	flags.width > flags.precision && !flags.hash)
+		len_res += n_time((flags.width - len), &ft_putchar, ' ');
 	else if (flags.width > len && flags.width <= flags.precision &&\
 	!flags.hash)
 		len_res += n_time((flags.precision - len), &ft_putchar, '0');
@@ -128,5 +135,7 @@ int if_flags_ito(a_struct flags, int len, int base, int letter)
 		len_res += print_nul_pr(flags, len, base, letter);
 	else if (flags.hash)
 		len_res += print_space(flags, len, base, letter);
+	else if (flags.precision)
+		len_res += print_nul(flags, len, base, letter);
 	return(len_res);
 }

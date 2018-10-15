@@ -59,6 +59,8 @@ int	ft_itoa_base_int(unsigned int n, unsigned int base, int letter, a_struct fla
 	j = 1;
 	len_res = 0;
 	nb = n;
+	if (n == 0)
+		letter = -1;
 	len = lenght(nb, base, 0, &j);
 	len_res += if_flags_ito(flags, len, base, letter);
 	len_res += fill_int(base, nb, j, letter);

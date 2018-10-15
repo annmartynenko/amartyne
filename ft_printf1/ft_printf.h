@@ -75,5 +75,6 @@ int			ft_itoa_base_int(unsigned int n, unsigned int base, int letter, a_struct f
 int			ft_itoa_unslong(unsigned long n, unsigned long base, int letter, a_struct flags);
 int			ft_itoa_max(uintmax_t n, uintmax_t base, int letter, a_struct flags);
 void 		ft_putmax(intmax_t n, a_struct flags, int *len_res);
+void		if_flags_d(a_struct flags, int *len, int *len_res);
 
 #endif
