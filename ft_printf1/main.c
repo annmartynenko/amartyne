@@ -205,5 +205,34 @@ int	main()
 	printf ("28<must %d, my %d>\n", len028, len28);
 	printf ("29<must %d, my %d>\n30<must %d, my %d>\n", len029, len29, len030, len30);
 	printf ("31<must %d, my %d>\n32<must %d, my %d>\n", len031, len31, len032, len32);
+	int len033 = printf("33or:%0d\n", -42);
+	int len33 = ft_printf("33ft:%0d\n", -42);
+	int len034 = printf("34or:%00d\n", -42);
+	int len34 = ft_printf("34ft:%00d\n", -42);
+	int len035 = printf("35or:%05d\n", 42);
+	int len35 = ft_printf("35ft:%05d\n", 42);
+	int len036 = printf("36or:%5d\n", -42);
+	int len36 = ft_printf("36ft:%5d\n", -42);
+	int len037 = printf("37or:%03.2d\n", -1);
+	int len37 = ft_printf("37ft:%03.2d\n", -1);
+	printf ("33<must %d, my %d>\n", len033, len34);
+	printf ("34<must %d, my %d>\n35<must %d, my %d>\n", len034, len34, len035, len35);
+	printf ("36<must %d, my %d>\n37<must %d, my %d>\n", len036, len36, len037, len37);
 	return (0);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

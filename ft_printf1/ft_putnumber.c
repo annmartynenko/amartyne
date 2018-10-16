@@ -54,9 +54,11 @@ void	ft_putnumber(long int n, a_struct flags, int *len_res)
 		(*len_res) += ft_putchar('-');
 		(*len_res) += ft_putchar('2');
 	}
-	if (n < 0 && (!flags.nul || flags.minus))
+	if (n < 0 && ((!flags.nul && !flags.width && !flags.precision) || flags.minus ||\
+	(flags.nul && !flags.width && !flags.precision)))
 	{
 		(*len_res) += ft_putchar('-');
+		len++;
 	}
 	else if (n >= 0 && flags.plus && !flags.nul && !flags.minus &&\
 	flags.precision >= flags.width)

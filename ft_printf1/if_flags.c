@@ -63,12 +63,18 @@ void	if_flags_d(a_struct flags, int *len, int *len_res)
 	if (flags.width > (*len) && flags.nul && !flags.minus && !flags.precision)
 	{
 		if (flags.plus == '+')
+		{
+			(*len)++;
 			(*len_res) += ft_putchar('+');
+		}
 		else if (flags.plus == 100)
+		{
+			(*len)++;
 			(*len_res) += ft_putchar('-');
-		(*len_res) += n_time((flags.width - (*len) - 1), &ft_putchar, '0');
+		}
+		(*len_res) += n_time((flags.width - (*len)), &ft_putchar, '0');
 	}
-	else if (flags.width > (*len) && !flags.nul && flags.plus && !flags.minus)
+	else if (flags.width > (*len) && !flags.nul && flags.plus != 100 && !flags.minus)
 	{
 		if (flags.plus)
 			(*len)++;
@@ -79,7 +85,13 @@ void	if_flags_d(a_struct flags, int *len, int *len_res)
 	}
 	else if (flags.width > (*len) && !flags.minus && !flags.nul && \
 	(*len) > flags.precision)
+	{
+		if (flags.plus == 100)
+			(*len)++;
 		*len_res += n_time((flags.width - (*len)), &ft_putchar, ' ');
+		if (flags.plus == 100)
+			(*len_res) += ft_putchar('-');
+	}
 	else if (flags.width > (*len) && flags.precision && \
     flags.width > flags.precision && !flags.minus)
 	{
