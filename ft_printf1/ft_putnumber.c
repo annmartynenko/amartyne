@@ -64,7 +64,6 @@ void	ft_putnumber(long int n, a_struct flags, int *len_res)
 	flags.precision >= flags.width)
 		(*len_res) += ft_putchar('+');
 	print_numb(nb, flags, len, len_res);
-
 }
 
 void 	print_max(intmax_t n, a_struct flags, int len, int *len_res)
@@ -96,13 +95,6 @@ void	ft_putmax(intmax_t n, a_struct flags, int *len_res)
 	}
 	len = a_len(nb, 10, len, &j);
 	if_flags(flags, len, len_res);
-	if (nb == -2147483648)
-	{
-		nb = nb % 1000000000;
-		nb = -nb;
-		(*len_res) += ft_putchar('-');
-		(*len_res) += ft_putchar('2');
-	}
 	if (n < 0)
 		(*len_res) += ft_putchar('-');
 	print_max(nb, flags, len, len_res);

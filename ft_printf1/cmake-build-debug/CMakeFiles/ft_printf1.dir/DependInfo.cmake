@@ -12,11 +12,15 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/amartyne/CLionProjects/ft_printf1/ft_isalpha.c" "/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/ft_isalpha.c.o"
   "/Users/amartyne/CLionProjects/ft_printf1/ft_isdigit.c" "/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/ft_isdigit.c.o"
   "/Users/amartyne/CLionProjects/ft_printf1/ft_itoa_base.c" "/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/ft_itoa_base.c.o"
+  "/Users/amartyne/CLionProjects/ft_printf1/ft_itoa_base_int.c" "/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/ft_itoa_base_int.c.o"
+  "/Users/amartyne/CLionProjects/ft_printf1/ft_itoa_max.c" "/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/ft_itoa_max.c.o"
+  "/Users/amartyne/CLionProjects/ft_printf1/ft_itoa_unslong.c" "/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/ft_itoa_unslong.c.o"
   "/Users/amartyne/CLionProjects/ft_printf1/ft_memcpy.c" "/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/ft_memcpy.c.o"
   "/Users/amartyne/CLionProjects/ft_printf1/ft_memset.c" "/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/ft_memset.c.o"
   "/Users/amartyne/CLionProjects/ft_printf1/ft_printf.c" "/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/ft_printf.c.o"
   "/Users/amartyne/CLionProjects/ft_printf1/ft_putchar.c" "/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/ft_putchar.c.o"
   "/Users/amartyne/CLionProjects/ft_printf1/ft_putchar_fd.c" "/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/ft_putchar_fd.c.o"
+  "/Users/amartyne/CLionProjects/ft_printf1/ft_putint.c" "/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/ft_putint.c.o"
   "/Users/amartyne/CLionProjects/ft_printf1/ft_putnbr.c" "/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/ft_putnbr.c.o"
   "/Users/amartyne/CLionProjects/ft_printf1/ft_putnbr_fd.c" "/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/ft_putnbr_fd.c.o"
   "/Users/amartyne/CLionProjects/ft_printf1/ft_putnumber.c" "/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/ft_putnumber.c.o"
@@ -27,9 +31,12 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/amartyne/CLionProjects/ft_printf1/ft_strlen.c" "/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/ft_strlen.c.o"
   "/Users/amartyne/CLionProjects/ft_printf1/ft_strsub.c" "/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/ft_strsub.c.o"
   "/Users/amartyne/CLionProjects/ft_printf1/if_flags.c" "/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/if_flags.c.o"
+  "/Users/amartyne/CLionProjects/ft_printf1/main.c" "/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/main.c.o"
+  "/Users/amartyne/CLionProjects/ft_printf1/not_spec.c" "/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/not_spec.c.o"
   "/Users/amartyne/CLionProjects/ft_printf1/number.c" "/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/number.c.o"
   "/Users/amartyne/CLionProjects/ft_printf1/specifier.c" "/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/specifier.c.o"
   "/Users/amartyne/CLionProjects/ft_printf1/unicode.c" "/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/unicode.c.o"
+  "/Users/amartyne/CLionProjects/ft_printf1/valid.c" "/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/valid.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

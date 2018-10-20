@@ -34,4 +34,11 @@ add_executable(ft_printf1
         Makefile
         number.c
         specifier.c
-        unicode.c)
+        unicode.c
+        ft_itoa_base_int.c
+        ft_itoa_max.c
+        ft_itoa_unslong.c
+        main.c
+        not_spec.c
+        valid.c
+        ft_putint.c)

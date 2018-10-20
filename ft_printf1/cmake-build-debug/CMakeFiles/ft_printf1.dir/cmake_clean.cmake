@@ -25,6 +25,13 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf1.dir/number.c.o"
   "CMakeFiles/ft_printf1.dir/specifier.c.o"
   "CMakeFiles/ft_printf1.dir/unicode.c.o"
+  "CMakeFiles/ft_printf1.dir/ft_itoa_base_int.c.o"
+  "CMakeFiles/ft_printf1.dir/ft_itoa_max.c.o"
+  "CMakeFiles/ft_printf1.dir/ft_itoa_unslong.c.o"
+  "CMakeFiles/ft_printf1.dir/main.c.o"
+  "CMakeFiles/ft_printf1.dir/not_spec.c.o"
+  "CMakeFiles/ft_printf1.dir/valid.c.o"
+  "CMakeFiles/ft_printf1.dir/ft_putint.c.o"
   "ft_printf1.pdb"
   "ft_printf1"
 )

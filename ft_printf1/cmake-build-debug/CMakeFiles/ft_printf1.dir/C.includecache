@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/amartyne/CLionProjects/ft_printf1/ft_printf.h
+unistd.h
+-
+stdlib.h
+-
+unistd.h
+-
+stdarg.h
+-
+
+/Users/amartyne/CLionProjects/ft_printf1/ft_putint.c
+ft_printf.h
+/Users/amartyne/CLionProjects/ft_printf1/ft_printf.h
+stdio.h
+-
+

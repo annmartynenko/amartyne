@@ -112,6 +112,15 @@
 		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_itoa_base.c">
 			<Option target="ft_printf1"/>
 		</Unit>
+		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_itoa_base_int.c">
+			<Option target="ft_printf1"/>
+		</Unit>
+		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_itoa_max.c">
+			<Option target="ft_printf1"/>
+		</Unit>
+		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_itoa_unslong.c">
+			<Option target="ft_printf1"/>
+		</Unit>
 		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_memcpy.c">
 			<Option target="ft_printf1"/>
 		</Unit>
@@ -128,6 +137,9 @@
 			<Option target="ft_printf1"/>
 		</Unit>
 		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_putchar_fd.c">
+			<Option target="ft_printf1"/>
+		</Unit>
+		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_putint.c">
 			<Option target="ft_printf1"/>
 		</Unit>
 		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_putnbr.c">
@@ -160,6 +172,12 @@
 		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/if_flags.c">
 			<Option target="ft_printf1"/>
 		</Unit>
+		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/main.c">
+			<Option target="ft_printf1"/>
+		</Unit>
+		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/not_spec.c">
+			<Option target="ft_printf1"/>
+		</Unit>
 		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/number.c">
 			<Option target="ft_printf1"/>
 		</Unit>
@@ -167,6 +185,9 @@
 			<Option target="ft_printf1"/>
 		</Unit>
 		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/unicode.c">
+			<Option target="ft_printf1"/>
+		</Unit>
+		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/valid.c">
 			<Option target="ft_printf1"/>
 		</Unit>
 		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/CMakeLists.txt">

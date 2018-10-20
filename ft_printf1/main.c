@@ -124,6 +124,7 @@ int	main()
 //	len1 = printf("%-5.2s is a string\n", "");
 //	len2 = ft_printf("%-5.2s is a string\n", "");
 //	printf("<must %d, my %d>", len1, len2);
+/*
 	int len01 = printf("1or:% d\n", -42);
 	len1 = ft_printf("1ft:% d\n", -42);
 	int len02 = printf("2or:%+d\n", -42);
@@ -217,7 +218,11 @@ int	main()
 	int len37 = ft_printf("37ft:%03.2d\n", -1);
 	printf ("33<must %d, my %d>\n", len033, len34);
 	printf ("34<must %d, my %d>\n35<must %d, my %d>\n", len034, len34, len035, len35);
-	printf ("36<must %d, my %d>\n37<must %d, my %d>\n", len036, len36, len037, len37);
+	printf ("36<must %d, my %d>\n37<must %d, my %d>\n", len036, len36, len037, len37);*/
+	signed char c = 128;
+	int len038 = printf("38or:%hhd\n", c);
+	int len38 = ft_printf("38ft:%hhd\n", c);
+	printf("38<must %d, my %d>\n", len038, len38);
 	return (0);
 }
 

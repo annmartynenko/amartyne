@@ -18,7 +18,7 @@ ft_putstring.c ft_putnumber.c specifier.c ft_memset.c ft_strlen.c\
 ft_putchar.c ft_putstr.c ft_atoi.c ft_memcpy.c ft_isalpha.c ft_isdigit.c\
 ft_strsub.c ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c ft_putnbr_fd.c\
 ft_arrfree.c valid.c not_spec.c ft_itoa_base_int.c ft_itoa_unslong.c\
-ft_itoa_max.c
+ft_itoa_max.c ft_putint.c
 
 FLAGS = -Wall -Wextra -Werror
 

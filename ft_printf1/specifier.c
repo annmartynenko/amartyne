@@ -32,7 +32,7 @@ int specX2(char *format, int *i, va_list ap, a_struct flags)
 	else if (format[(*i) - 2] == 'h' && format[(*i) - 1] == 'h')
 	{
 		if(format[(*i)] == 'd' || format[(*i)] == 'i')
-			ft_putnumber((signed char)va_arg(ap, int), flags, &len_res);
+			ft_putint((signed char)va_arg(ap, int), flags, &len_res);
 		else if (format[(*i)] == 'x')
 			len_res += ft_itoa_max((unsigned char)va_arg(ap, int), 16, low, flags);
 		else if (format[(*i)] == 'X')
