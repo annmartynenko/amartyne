@@ -8,189 +8,194 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug"/>
+				<Option working_dir="/Users/amartyne/ft_printf1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/amartyne/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/amartyne/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/amartyne/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/amartyne/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug"/>
+				<Option working_dir="/Users/amartyne/ft_printf1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/amartyne/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/amartyne/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/amartyne/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/amartyne/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug"/>
+				<Option working_dir="/Users/amartyne/ft_printf1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/amartyne/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/amartyne/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/amartyne/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/amartyne/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ft_printf1">
-				<Option output="/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/ft_printf1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug"/>
+				<Option output="/Users/amartyne/ft_printf1/cmake-build-debug/ft_printf1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/amartyne/ft_printf1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/amartyne/CLionProjects/ft_printf1/."/>
+					<Add directory="/Users/amartyne/ft_printf1/."/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft_printf1"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/amartyne/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft_printf1"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/amartyne/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/amartyne/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/amartyne/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ft_printf1/fast">
-				<Option output="/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/ft_printf1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug"/>
+				<Option output="/Users/amartyne/ft_printf1/cmake-build-debug/ft_printf1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/amartyne/ft_printf1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/amartyne/CLionProjects/ft_printf1/."/>
+					<Add directory="/Users/amartyne/ft_printf1/."/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft_printf1/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/amartyne/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft_printf1/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/amartyne/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/amartyne/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/amartyne/ft_printf1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/Makefile">
+		<Unit filename="/Users/amartyne/ft_printf1/Makefile">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/author">
+		<Unit filename="/Users/amartyne/ft_printf1/author">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/extra_fun.c">
+		<Unit filename="/Users/amartyne/ft_printf1/extra_fun.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/find_flag.c">
+		<Unit filename="/Users/amartyne/ft_printf1/find_flag.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/for_flags.c">
+		<Unit filename="/Users/amartyne/ft_printf1/for_add.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_arrfree.c">
+		<Unit filename="/Users/amartyne/ft_printf1/for_flags.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_atoi.c">
+		<Unit filename="/Users/amartyne/ft_printf1/ft_arrfree.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_isalpha.c">
+		<Unit filename="/Users/amartyne/ft_printf1/ft_atoi.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_isdigit.c">
+		<Unit filename="/Users/amartyne/ft_printf1/ft_isalpha.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_itoa_base.c">
+		<Unit filename="/Users/amartyne/ft_printf1/ft_isdigit.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_itoa_base_int.c">
+		<Unit filename="/Users/amartyne/ft_printf1/ft_itoa_base.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_itoa_max.c">
+		<Unit filename="/Users/amartyne/ft_printf1/ft_itoa_base_int.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_itoa_unslong.c">
+		<Unit filename="/Users/amartyne/ft_printf1/ft_itoa_max.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_memcpy.c">
+		<Unit filename="/Users/amartyne/ft_printf1/ft_itoa_unslong.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_memset.c">
+		<Unit filename="/Users/amartyne/ft_printf1/ft_memcpy.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_printf.c">
+		<Unit filename="/Users/amartyne/ft_printf1/ft_memset.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_printf.h">
+		<Unit filename="/Users/amartyne/ft_printf1/ft_printf.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_putchar.c">
+		<Unit filename="/Users/amartyne/ft_printf1/ft_printf.h">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_putchar_fd.c">
+		<Unit filename="/Users/amartyne/ft_printf1/ft_putchar.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_putint.c">
+		<Unit filename="/Users/amartyne/ft_printf1/ft_putchar_fd.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_putnbr.c">
+		<Unit filename="/Users/amartyne/ft_printf1/ft_putint.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_putnbr_fd.c">
+		<Unit filename="/Users/amartyne/ft_printf1/ft_putnbr.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_putnumber.c">
+		<Unit filename="/Users/amartyne/ft_printf1/ft_putnbr_fd.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_putstr.c">
+		<Unit filename="/Users/amartyne/ft_printf1/ft_putnumber.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_putstr_fd.c">
+		<Unit filename="/Users/amartyne/ft_printf1/ft_putstr.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_putstring.c">
+		<Unit filename="/Users/amartyne/ft_printf1/ft_putstr_fd.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_putunsnbr.c">
+		<Unit filename="/Users/amartyne/ft_printf1/ft_putstring.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_strlen.c">
+		<Unit filename="/Users/amartyne/ft_printf1/ft_putunsnbr.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/ft_strsub.c">
+		<Unit filename="/Users/amartyne/ft_printf1/ft_strlen.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/if_flags.c">
+		<Unit filename="/Users/amartyne/ft_printf1/ft_strsub.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/main.c">
+		<Unit filename="/Users/amartyne/ft_printf1/if_flags.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/not_spec.c">
+		<Unit filename="/Users/amartyne/ft_printf1/main.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/number.c">
+		<Unit filename="/Users/amartyne/ft_printf1/not_spec.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/specifier.c">
+		<Unit filename="/Users/amartyne/ft_printf1/number.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/unicode.c">
+		<Unit filename="/Users/amartyne/ft_printf1/specifier.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/valid.c">
+		<Unit filename="/Users/amartyne/ft_printf1/unicode.c">
 			<Option target="ft_printf1"/>
 		</Unit>
-		<Unit filename="/Users/amartyne/CLionProjects/ft_printf1/CMakeLists.txt">
+		<Unit filename="/Users/amartyne/ft_printf1/valid.c">
+			<Option target="ft_printf1"/>
+		</Unit>
+		<Unit filename="/Users/amartyne/ft_printf1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

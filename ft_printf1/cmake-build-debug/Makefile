@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/amartyne/CLionProjects/ft_printf1
+CMAKE_SOURCE_DIR = /Users/amartyne/ft_printf1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/amartyne/ft_printf1/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles /Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/amartyne/ft_printf1/cmake-build-debug/CMakeFiles /Users/amartyne/ft_printf1/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/amartyne/CLionProjects/ft_printf1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/amartyne/ft_printf1/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -176,6 +176,33 @@ find_flag.s: find_flag.c.s
 find_flag.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf1.dir/build.make CMakeFiles/ft_printf1.dir/find_flag.c.s
 .PHONY : find_flag.c.s
+
+for_add.o: for_add.c.o
+
+.PHONY : for_add.o
+
+# target to build an object file
+for_add.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf1.dir/build.make CMakeFiles/ft_printf1.dir/for_add.c.o
+.PHONY : for_add.c.o
+
+for_add.i: for_add.c.i
+
+.PHONY : for_add.i
+
+# target to preprocess a source file
+for_add.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf1.dir/build.make CMakeFiles/ft_printf1.dir/for_add.c.i
+.PHONY : for_add.c.i
+
+for_add.s: for_add.c.s
+
+.PHONY : for_add.s
+
+# target to generate assembly for a file
+for_add.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf1.dir/build.make CMakeFiles/ft_printf1.dir/for_add.c.s
+.PHONY : for_add.c.s
 
 for_flags.o: for_flags.c.o
 
@@ -1029,6 +1056,9 @@ help:
 	@echo "... find_flag.o"
 	@echo "... find_flag.i"
 	@echo "... find_flag.s"
+	@echo "... for_add.o"
+	@echo "... for_add.i"
+	@echo "... for_add.s"
 	@echo "... for_flags.o"
 	@echo "... for_flags.i"
 	@echo "... for_flags.s"

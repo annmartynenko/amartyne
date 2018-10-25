@@ -67,7 +67,7 @@ int			if_flags_ito(a_struct flags, int len, int base, int letter);
 void		for_minus(a_struct flags, int len, int base, int *len_res);
 int			len_unco(int size);
 void		ft_putstring(char const *s, a_struct flags, int *len_res);
-void		ft_putnumber(long int n, a_struct flags, int *len_res);
+void		ft_putnumber(long long int n, a_struct flags, int *len_res);
 int			specifier(char *format, int *i, va_list ap, a_struct flags);
 int			valid(char format);
 void		not_spec(a_struct flags, int *len_res);
@@ -77,5 +77,10 @@ int			ft_itoa_max(uintmax_t n, uintmax_t base, int letter, a_struct flags);
 void 		ft_putmax(intmax_t n, a_struct flags, int *len_res);
 void		if_flags_d(a_struct flags, int *len, int *len_res);
 void		ft_putint(int n, a_struct flags, int *len_res);
+void		ft_putschar(signed char n, a_struct flags, int *len_res);
+void		for_h(char *format, int *i, va_list ap, a_struct flags, int *len_res);
+void		for_l(char *format, int *i, va_list ap, a_struct flags, int *len_res);
+void		for_ll(char *format, int *i, va_list ap, a_struct flags, int *len_res);
+void		for_hh(char *format, int *i, va_list ap, a_struct flags, int *len_res);
 
 #endif

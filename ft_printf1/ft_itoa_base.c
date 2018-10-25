@@ -68,9 +68,10 @@ int	ft_itoa_base(long long n, int base, int letter, a_struct flags)
 	nb = n;
 	if (n == 0)
 		letter = -1;
-	len = unsigned_len(nb, (unsigned)base, 0, &j);
+	len = unsigned_len(nb, (unsigned) base, 0, &j);
 	len_res += if_flags_ito(flags, len, base, letter);
-	len_res += fill((unsigned)base, nb, j, letter);
+	if (flags.precision != 0)
+		len_res += fill((unsigned) base, nb, j, letter);
 	for_minus(flags, len, base, &len_res);
 	return (len_res);
 }

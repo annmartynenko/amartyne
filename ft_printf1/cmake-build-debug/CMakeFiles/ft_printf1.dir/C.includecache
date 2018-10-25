@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/amartyne/CLionProjects/ft_printf1/ft_printf.h
+/Users/amartyne/ft_printf1/ft_printf.h
 unistd.h
 -
 stdlib.h
@@ -16,9 +16,21 @@ unistd.h
 stdarg.h
 -
 
-/Users/amartyne/CLionProjects/ft_printf1/ft_putint.c
+/Users/amartyne/ft_printf1/ft_putnumber.c
 ft_printf.h
-/Users/amartyne/CLionProjects/ft_printf1/ft_printf.h
+/Users/amartyne/ft_printf1/ft_printf.h
 stdio.h
+-
+
+/Users/amartyne/ft_printf1/if_flags.c
+ft_printf.h
+/Users/amartyne/ft_printf1/ft_printf.h
+
+/Users/amartyne/ft_printf1/main.c
+ft_printf.h
+/Users/amartyne/ft_printf1/ft_printf.h
+stdio.h
+-
+locale.h
 -
 

@@ -27,7 +27,7 @@ void	if_flags(a_struct flags, int len, int *len_res)
 	else if (flags.width > len && !flags.minus && !flags.nul && \
     len > flags.precision)
 		*len_res += n_time((flags.width - len), &ft_putchar, ' ');
-	else if (flags.width > len && flags.precision && \
+	else if (flags.width > len && flags.precision != -1 && \
     flags.width > flags.precision)
 	{
 		(*len_res) += n_time((flags.width - flags.precision), &ft_putchar, ' ');
@@ -48,7 +48,7 @@ void	if_flags(a_struct flags, int len, int *len_res)
 		}
 		*len_res += n_time((flags.width - len), &ft_putchar, '0');
 	}
-	else if (flags.precision)
+	else if (flags.precision != -1)
 	{
 		if (flags.space)
 			(*len_res) += ft_putchar(' ');
@@ -60,7 +60,7 @@ void	if_flags(a_struct flags, int len, int *len_res)
 
 void	if_flags_d(a_struct flags, int *len, int *len_res)
 {
-	if (flags.width > (*len) && flags.nul && !flags.minus && !flags.precision)
+	if (flags.width > (*len) && flags.nul && !flags.minus && flags.precision == -1)
 	{
 		if (flags.plus == '+')
 		{
@@ -74,7 +74,8 @@ void	if_flags_d(a_struct flags, int *len, int *len_res)
 		}
 		(*len_res) += n_time((flags.width - (*len)), &ft_putchar, '0');
 	}
-	else if (flags.width > (*len) && !flags.nul && flags.plus != 100 && !flags.minus)
+	else if (flags.width > (*len) && !flags.nul && flags.plus != 100 && !flags.minus &&\
+	flags.precision == -1)
 	{
 		if (flags.plus)
 			(*len)++;
@@ -88,11 +89,13 @@ void	if_flags_d(a_struct flags, int *len, int *len_res)
 	{
 		if (flags.plus == 100)
 			(*len)++;
+		if (flags.precision == 0)
+			(*len) = 0;
 		*len_res += n_time((flags.width - (*len)), &ft_putchar, ' ');
 		if (flags.plus == 100)
 			(*len_res) += ft_putchar('-');
 	}
-	else if (flags.width > (*len) && flags.precision && \
+	else if (flags.width > (*len) && flags.precision != -1 && \
     flags.width > flags.precision && !flags.minus)
 	{
 		(*len_res) += n_time((flags.width - flags.precision), &ft_putchar, ' ');
@@ -113,7 +116,7 @@ void	if_flags_d(a_struct flags, int *len, int *len_res)
 		}
 		*len_res += n_time((flags.width - (*len)), &ft_putchar, '0');
 	}
-	else if (flags.precision)
+	else if (flags.precision != -1)
 	{
 		if (flags.space)
 		{

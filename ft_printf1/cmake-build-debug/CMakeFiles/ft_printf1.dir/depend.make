@@ -7,6 +7,9 @@ CMakeFiles/ft_printf1.dir/extra_fun.c.o: ../ft_printf.h
 CMakeFiles/ft_printf1.dir/find_flag.c.o: ../find_flag.c
 CMakeFiles/ft_printf1.dir/find_flag.c.o: ../ft_printf.h
 
+CMakeFiles/ft_printf1.dir/for_add.c.o: ../for_add.c
+CMakeFiles/ft_printf1.dir/for_add.c.o: ../ft_printf.h
+
 CMakeFiles/ft_printf1.dir/for_flags.c.o: ../for_flags.c
 CMakeFiles/ft_printf1.dir/for_flags.c.o: ../ft_printf.h
 

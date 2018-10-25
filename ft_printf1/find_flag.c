@@ -79,7 +79,7 @@ a_struct	create_struct()
 	flags.minus = 0;
 	flags.width = 0;
 	flags.nul = 0;
-	flags.precision = 0;
+	flags.precision = -1;
 	flags.plus = 0;
 	flags.sp = 0;
 	return(flags);
@@ -112,5 +112,7 @@ a_struct find_flag(char *str, int *i, va_list ap)
 		}
 		flags = field(str, flags, i);
 	}
+	if (flags.precision == '.')
+		flags.precision = 0;
 	return(flags);
 }

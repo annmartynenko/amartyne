@@ -22,9 +22,10 @@ void ft_putstring(char const *s, a_struct flags, int *len_res)
 	if (s)
 	{
 		//printf("\nlen %d, w %d, pr %d\n", len, flags.width, flags.precision);
-		if (flags.width > len && !flags.minus && !flags.precision)
+		if (flags.width > len && !flags.minus && flags.precision == -1)
 			(*len_res) += n_time((flags.width - len), &ft_putchar, ' ');
-		else if (flags.width > flags.precision && !flags.minus)
+		else if (flags.width > flags.precision && !flags.minus &&\
+		flags.precision != -1)
 		{
 			if (len == 0)
 				(*len_res) += n_time((flags.width), &ft_putchar, ' ');
@@ -34,21 +35,23 @@ void ft_putstring(char const *s, a_struct flags, int *len_res)
 		}
 		while (s[i] != '\0')
 		{
-			if (flags.precision && i == flags.precision)
+			if (flags.precision != -1 && i == flags.precision)
 				break;
 			(*len_res) += ft_putchar(s[i]);
 			i++;
 		}
-		if (flags.width > len && flags.minus && !flags.precision)
+		if (flags.width > len && flags.minus && flags.precision == -1)
 			(*len_res) += n_time((flags.width - len), &ft_putchar, ' ');
 		else if (flags.width > flags.precision && flags.minus)
 		{
-			if (flags.precision <= len)
+			if (flags.precision <= len && flags.precision != -1)
 				(*len_res) += n_time((flags.width - flags.precision),\
 				&ft_putchar, ' ');
-			else
+			else if (flags.precision > len && flags.precision != -1)
 				(*len_res) += n_time(flags.width,\
 				&ft_putchar, ' ');
 		}
 	}
+	else
+		*len_res += ft_putstr("(null)");
 }

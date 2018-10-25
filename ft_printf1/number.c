@@ -56,7 +56,7 @@ int    convert(char format, va_list ap, a_struct flags, unsigned long modifer)
 	if (format == 'o')
 		len_res += ft_itoa_base(modifer, 8, low, flags);
 	else if (format == 'u')
-		ft_putunsnbr(modifer, flags, &len_res);
+		ft_putunslnbr(modifer, flags, &len_res);
 	else if (format == 'x')
 		len_res += ft_itoa_base_int(modifer, 16, low, flags);
 	else if (format == 'X')

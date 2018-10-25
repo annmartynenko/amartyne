@@ -13,23 +13,19 @@
 #include "ft_printf.h"
 #include <stdio.h>
 
-void 	print_numb(long int n, a_struct flags, int len, int *len_res)
+void 	print_numb(long long n, a_struct flags, int len, int *len_res)
 {
 	if (n < 10)
 		(*len_res) += ft_putchar(n + '0');
 	else
 	{
-		ft_putnbr((n / 10), len_res);
+		print_numb((n / 10), flags, len, len_res);
 		(*len_res) += ft_putchar(n % 10 + '0');
 	}
 	//printf("\nlen %d\n", flags.width - len);
-	if (flags.width > len && flags.minus)
-	{
-		(*len_res) += n_time((flags.width - len), &ft_putchar, ' ');
-	}
 }
 
-void	ft_putnumber(long int n, a_struct flags, int *len_res)
+void	ft_putnumber(long long int n, a_struct flags, int *len_res)
 {
 	long long j;
 	long long nb;
@@ -41,29 +37,32 @@ void	ft_putnumber(long int n, a_struct flags, int *len_res)
 	len = 0;
 	if (n < 0)
 	{
-		nb = -nb;
+		nb *= -1;
 		flags.plus = 100;
+	}
+	if (nb == -922337203685477580.8*10)
+	{
+		nb = nb % 1000000000000000000;
+		nb = -nb;
+		(*len_res) += ft_putchar('-');
+		(*len_res) += ft_putchar('9');
 	}
 	len += a_len(nb, 10, len, &j);
 	//printf("\nlen %d\n", len);
 	if_flags_d(flags, &len, len_res);
-	if (nb == -2147483648)
-	{
-		nb = nb % 1000000000;
-		nb = -nb;
-		(*len_res) += ft_putchar('-');
-		(*len_res) += ft_putchar('2');
-	}
-	if (n < 0 && ((!flags.nul && !flags.width && !flags.precision) || flags.minus ||\
-	(flags.nul && !flags.width && !flags.precision)))
+	if (n < 0 && ((!flags.nul && !flags.width && flags.precision == -1) || flags.minus ||\
+	(flags.nul && !flags.width && flags.precision == -1)) && nb != 22337203685477580.8*10)
 	{
 		(*len_res) += ft_putchar('-');
 		len++;
 	}
 	else if (n >= 0 && flags.plus && !flags.nul && !flags.minus &&\
-	flags.precision >= flags.width)
+	flags.precision != -1 >= flags.width)
 		(*len_res) += ft_putchar('+');
-	print_numb(nb, flags, len, len_res);
+	if (nb != 0 || flags.precision != 0)
+		print_numb(nb, flags, len, len_res);
+	if (flags.width > len && flags.minus)
+		(*len_res) += n_time((flags.width - len), &ft_putchar, ' ');
 }
 
 void 	print_max(intmax_t n, a_struct flags, int len, int *len_res)
