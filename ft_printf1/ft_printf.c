@@ -39,6 +39,8 @@ int	ft_printf(char *format, ...)
 			//printf("char %c\n", format[i]);
 			if (format[i] == '%')
 				len_res += ft_putchar('%');
+			else if (!valid(format[i]))
+				len_res += ft_putchar(format[i]);
 			else
 			{
 				//printf("form %c\n", format[i]);
@@ -54,6 +56,8 @@ int	ft_printf(char *format, ...)
 					if (flags.width && flags.minus)
 						len_res += n_time((flags.width - 1), &ft_putchar, ' ');
 				}
+				else if (!valid(format[i]))
+					len_res += ft_putchar(format[i]);
 				//printf("plus %d\n", flags.plus);
 			}
 			//printf("wid %d, min %d\n", flags.width, flags.minus);

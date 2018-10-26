@@ -38,7 +38,7 @@ int specifier_jz(char *format, int *i, va_list ap, a_struct flags)
 	if (format[(*i) - 1] == 'j')
 	{
 		if (format[(*i)] == 'd' || format[(*i)] == 'i')
-			ft_putmax(va_arg(ap, intmax_t), flags, &len_res);
+			ft_putnumber(va_arg(ap, intmax_t), flags, &len_res);
 		else if (format[(*i)])
 		{
 			if (format[(*i)] == 'x')

@@ -231,7 +231,7 @@ int	main()
 //	int len041 = printf("or:%lu\n", 4294967297);
 //	int len41 = ft_printf("ft:%lu\n", 4294967297);
 //	printf("41<must %d, my %d>\n", len041, len41);
-//	int len042 = printf("or:@moulitest: %#.x %#.0x\n", 0, 0); // not do
+//	int len042 = printf("or:@moulitest: %#.x %#.0x\n", 0, 0);
 //	int len42 = ft_printf("ft:@moulitest: %#.x %#.0x\n", 0, 0);
 //	printf("41<must %d, my %d>\n", len042, len42);
 //	int len043 = printf("or:%-05o\n", 2500);
@@ -267,9 +267,40 @@ int	main()
 //	int len053 = printf("or:%-10.5d\n", 4242);
 //	int len53 = ft_printf("ft:%-10.5d\n", 4242);
 //	printf("53<must %d, my %d>\n", len053, len53);
-	int len053 = printf("or:%-10.5d\n", 4242);
-	int len53 = ft_printf("ft:%-10.5d\n", 4242);
-	printf("53<must %d, my %d>\n", len053, len53);
+//	int len054 = printf("or:%5d\n", 42);
+//	int len54 = ft_printf("ft:%5d\n", 42);
+//	printf("54<must %d, my %d>\n", len054, len54);
+//	int len055 = printf("or:%+10.5d\n", 4242); //--
+//	int len55 = ft_printf("ft:%+10.5d\n", 4242);
+//	printf("55<must %d, my %d>\n", len055, len55);
+//	int len056 = printf("or:%-+10.5d\n", 4242);
+//	int len56 = ft_printf("ft:%-+10.5d\n", 4242);
+//	printf("56<must %d, my %d>\n", len056, len56);
+//	int len057 = printf("or:%03.2d\n", -1);
+//	int len57 = ft_printf("ft:%03.2d\n", -1);
+//	printf("57<must %d, my %d>\n", len057, len57);
+//	int len056 = printf("or:%.10d\n", -42);
+//	int len56 = ft_printf("ft:%.10d\n", -42);
+//	printf("56<must %d, my %d>\n", len056, len56);
+
+//	int len057 = printf("or:%hhd\n", 128);
+//	int len57 = ft_printf("ft:%hhd\n", 128);
+//	printf("57<must %d, my %d>\n", len057, len57);
+//	int len058 = printf("or:%hhd\n", -128);
+//	int len58 = ft_printf("ft:%hhd\n", -128);
+//	printf("58<must %d, my %d>\n", len058, len58);
+	int len059 = printf("or:%lu\n", -42);
+	int len59 = ft_printf("ft:%lu\n", -42);
+	printf("59<must %d, my %d>\n", len059, len59);
+//	int len060 = printf("or:%hU\n", 4294967296);
+//	int len60 = ft_printf("ft:%hU\n", 4294967296);
+//	printf("60<must %d, my %d>\n", len060, len60);
+//	int len061 = printf("or:%p\n", 0);
+//	int len61 = ft_printf("ft:%p\n", 0);
+//	printf("61<must %d, my %d>\n", len061, len61);
+//	int len062 = printf("or:% Zooo\n");
+//	int len62 = ft_printf("ft:% Zooo\n");
+//	printf("62<must %d, my %d>\n", len062, len62);
 	return (0);
 }
 

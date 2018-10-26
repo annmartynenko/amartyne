@@ -57,7 +57,7 @@ void	ft_putint(int n, a_struct flags, int *len_res)
 	print_n(nb, flags, len, len_res);
 }
 
-void 	print_sch(signed char n, a_struct flags, int len, int *len_res)
+void 	print_sch(int n, a_struct flags, int len, int *len_res)
 {
 	if (n < 10)
 		(*len_res) += ft_putchar(n + '0');
@@ -72,7 +72,7 @@ void 	print_sch(signed char n, a_struct flags, int len, int *len_res)
 	}
 }
 
-void	ft_putschar(signed char n, a_struct flags, int *len_res)
+void	ft_putschar(int n, a_struct flags, int *len_res)
 {
 	int j;
 	int nb;
@@ -89,8 +89,7 @@ void	ft_putschar(signed char n, a_struct flags, int *len_res)
 	}
 	len += a_len(nb, 10, len, (long long *)&j);
 	if_flags_d(flags, &len, len_res);
-	if (n < 0 && ((!flags.nul && !flags.width && flags.precision == -1) || flags.minus ||\
-	(flags.nul && !flags.width && flags.precision == -1)))
+	if (n < 0)
 	{
 		(*len_res) += ft_putchar('-');
 		len++;

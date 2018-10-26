@@ -49,15 +49,14 @@ void	ft_putnumber(long long int n, a_struct flags, int *len_res)
 	}
 	len += a_len(nb, 10, len, &j);
 	//printf("\nlen %d\n", len);
-	if_flags_d(flags, &len, len_res);
+	flags = if_flags_d(flags, &len, len_res);
 	if (n < 0 && ((!flags.nul && !flags.width && flags.precision == -1) || flags.minus ||\
 	(flags.nul && !flags.width && flags.precision == -1)) && nb != 22337203685477580.8*10)
 	{
 		(*len_res) += ft_putchar('-');
 		len++;
 	}
-	else if (n >= 0 && flags.plus && !flags.nul && !flags.minus &&\
-	flags.precision != -1 >= flags.width)
+	else if (n >= 0 && flags.plus && !flags.nul && !flags.minus && flags.sp != 1)
 		(*len_res) += ft_putchar('+');
 	if (nb != 0 || flags.precision != 0)
 		print_numb(nb, flags, len, len_res);
