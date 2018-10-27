@@ -19,19 +19,24 @@ void uni_str(wchar_t *arr, a_struct flags, int *len_res)
 
 	i = 0;
 	len = 0;
-	while (arr[i])
+	if (arr)
 	{
-		len += len_unco(count_bin((wchar_t)arr[i]));
-		i++;
+		while (arr[i])
+		{
+			len += len_unco(count_bin((wchar_t) arr[i]));
+			i++;
+		}
+		//(*len_res) += len;
+		i = 0;
+		if (flags.width > len && !flags.minus && !flags.nul)
+			(*len_res) += n_time((flags.width - len), &ft_putchar, ' ');
+		while (arr[i])
+			unicode(arr[i++], flags, 2, len_res);
+		if (flags.width > len && flags.minus && !flags.nul)
+			(*len_res) += n_time((flags.width - len), &ft_putchar, ' ');
 	}
-	(*len_res) += len;
-	i = 0;
-	if (flags.width > len && !flags.minus && !flags.nul)
-		(*len_res) += n_time((flags.width - len), &ft_putchar, ' ');
-	while (arr[i])
-		unicode(arr[i++], flags, 2, len_res);
-	if (flags.width > len && flags.minus && !flags.nul)
-		(*len_res) += n_time((flags.width - len), &ft_putchar, ' ');
+	else
+		*len_res += ft_putstr("(null)");
 }
 
 int n_time(int i, int (*f)(char), char str)

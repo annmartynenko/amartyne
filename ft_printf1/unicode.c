@@ -26,7 +26,7 @@ int count_bin(unsigned int numb)
 	return(len);
 }
 
-void two_bin(unsigned int numb)
+int two_bin(unsigned int numb)
 {
 	unsigned char part1;
 	unsigned char part2;
@@ -38,9 +38,10 @@ void two_bin(unsigned int numb)
 	write(1, &res, 1);
 	res = (128 | part2);
 	write(1, &res, 1);
+	return (2);
 }
 
-void three_bin(unsigned int numb)
+int three_bin(unsigned int numb)
 {
 	unsigned char part1;
 	unsigned char part2;
@@ -56,9 +57,10 @@ void three_bin(unsigned int numb)
 	write(1, &res, 1);
 	res = (128 | part3);
 	write(1, &res, 1);
+	return (3);
 }
 
-void four_bin(unsigned int numb)
+int four_bin(unsigned int numb)
 {
 	unsigned char part1;
 	unsigned char part2;
@@ -78,6 +80,7 @@ void four_bin(unsigned int numb)
 	write(1, &res, 1);
 	res = (128 | part4);
 	write(1, &res, 1);
+	return (4);
 }
 
 void unicode(wchar_t numb, a_struct flags, int mark, int *len_res)
@@ -89,17 +92,18 @@ void unicode(wchar_t numb, a_struct flags, int mark, int *len_res)
 	value = (unsigned int) numb;
 	size = count_bin(value);
 	len = len_unco(size);
-	(*len_res) += len / size;
+	if (size == 0)
+		size = 1;
 	if (flags.width > len && !flags.minus && !flags.nul && mark == unco)
 		(*len_res) += n_time((flags.width - len), &ft_putchar, ' ');
 	if (size <= 7)
-		ft_putchar(value);
+		*len_res += ft_putchar(value);
 	else if (size <= 11)
-		two_bin(value);
+		*len_res += two_bin(value);
 	else if (size <= 16)
-		three_bin(value);
+		*len_res += three_bin(value);
 	else
-		four_bin(value);
+		*len_res += four_bin(value);
 	if (flags.width > len && flags.minus && !flags.nul && mark == unco)
 		(*len_res) += n_time((flags.width - len), &ft_putchar, ' ');
 }

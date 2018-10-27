@@ -289,9 +289,9 @@ int	main()
 //	int len058 = printf("or:%hhd\n", -128);
 //	int len58 = ft_printf("ft:%hhd\n", -128);
 //	printf("58<must %d, my %d>\n", len058, len58);
-	int len059 = printf("or:%lu\n", -42);
-	int len59 = ft_printf("ft:%lu\n", -42);
-	printf("59<must %d, my %d>\n", len059, len59);
+//	int len059 = printf("or:%lu\n", -42);
+//	int len59 = ft_printf("ft:%lu\n", -42);
+//	printf("59<must %d, my %d>\n", len059, len59); //  strange thing
 //	int len060 = printf("or:%hU\n", 4294967296);
 //	int len60 = ft_printf("ft:%hU\n", 4294967296);
 //	printf("60<must %d, my %d>\n", len060, len60);
@@ -301,6 +301,45 @@ int	main()
 //	int len062 = printf("or:% Zooo\n");
 //	int len62 = ft_printf("ft:% Zooo\n");
 //	printf("62<must %d, my %d>\n", len062, len62);
+//	int len063 = printf("or:%C\n", 'c');//-
+//	int len63 = ft_printf("ft:%C\n", 'c');
+//	printf("63<must %d, my %d>\n", len063, len63);
+//	int len064 = printf("or:%C, %C\n", '4', '2');
+//	int len64 = ft_printf("ft:%C, %C\n", '4', '2');
+//	printf("64<must %d, my %d>\n", len064, len64);
+//	int len065 = printf("or:%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C \
+//%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C\
+//%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C\n",
+//						' ', '!', '"', '#', '$', '%', '&', '\'', '(', ')', '*', '+', ',', '-',
+//						'.', '/', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ':', ';',
+//						'<', '=', '>', '?', '@', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
+//						'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W',
+//						'X', 'Y', 'Z', '[', '\\', ']', '^', '_', '`', 'a', 'b', 'c', 'd', 'e',
+//						'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+//						't', 'u', 'v', 'w', 'x', 'y', 'z', '{', '|', '}');
+//	int len65 = ft_printf("ft:%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C \
+//%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C\
+//%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C%C\n",
+//						  ' ', '!', '"', '#', '$', '%', '&', '\'', '(', ')', '*', '+', ',', '-',
+//						  '.', '/', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ':', ';',
+//						  '<', '=', '>', '?', '@', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
+//						  'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W',
+//						  'X', 'Y', 'Z', '[', '\\', ']', '^', '_', '`', 'a', 'b', 'c', 'd', 'e',
+//						  'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+//						  't', 'u', 'v', 'w', 'x', 'y', 'z', '{', '|', '}');
+//	printf("65<must %d, my %d>\n", len065, len65);
+//	int len066 = printf("or:%C\n", L'猫');
+//	int len66 = ft_printf("ft:%C\n", L'猫');
+//	printf("66<must %d, my %d>\n", len066, len66);
+//	int len067 = printf("or:%C\n", 0);
+//	int len67 = ft_printf("ft:%C\n", 0);
+//	printf("67<must %d, my %d>\n", len067, len67);
+//	int len068 = printf("or:%S\n", L"米");
+//	int len68 = ft_printf("ft:%S\n", L"米");
+//	printf("68<must %d, my %d>\n", len068, len68);
+	int len069 = printf("or:%D\n", -1L);
+	int len69 = ft_printf("ft:%D\n", -1L);
+	printf("69<must %d, my %d>\n", len069, len69);
 	return (0);
 }
 

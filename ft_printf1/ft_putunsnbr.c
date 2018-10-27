@@ -60,7 +60,7 @@ void ft_putlnbr(long int n, a_struct flags, int *len_res)
 	j = 1;
 	len = 0;
 	len = a_len(n, 10, len, &j);
-	(*len_res) += len;
+	//(*len_res) += len;
     if_flags(flags, len, len_res);
 	if (n < 10)
 		(*len_res) += ft_putchar((char)(n + '0'));

@@ -18,7 +18,7 @@ int 	valid(char format)
 (format == 'x') || (format == 'X') || (format == 'u') || (format == 'U') ||\
 (format == 'S') || (format == 'c') || (format == 'C') || (format == 'p') ||\
 (format == 's') || (format == 'l') || (format == 'j') || (format == 'z') ||\
-(format == 'h'))
+(format == 'h') || (format == 'D'))
 		return (1);
 	if ((format == ' ') || (format == '.') || (format == '+') || (format == '-') ||\
 	(format == '#') || ft_isdigit(format))
