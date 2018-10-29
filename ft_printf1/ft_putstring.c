@@ -55,3 +55,23 @@ void ft_putstring(char const *s, a_struct flags, int *len_res)
 	else
 		*len_res += ft_putstr("(null)");
 }
+
+void	ft_putwchr(wchar_t *s, a_struct flags, int *len_res)
+{
+	int i;
+
+	i = 0;
+	if (s)
+	{
+		while (s[i] != '\0')
+		{
+			if (flags.precision != -1 && i == flags.precision)
+				break;
+			(*len_res) += 1;
+			ft_putwchr(s, flags, len_res);
+			i++;
+		}
+	}
+	else
+		*len_res += ft_putstr("(null)");
+}

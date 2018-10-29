@@ -46,21 +46,19 @@ unsigned long	check(char format, va_list ap)
 	return (0);
 }
 
-int    convert(char format, va_list ap, a_struct flags, unsigned long modifer)
+int    convert(char format, va_list ap, a_struct flags)
 {
 	int len_res;
 
 	len_res = 0;
-	if (modifer == 0)
-		modifer = check(format, ap);
 	if (format == 'o')
-		len_res += ft_itoa_base(modifer, 8, low, flags);
+		len_res += ft_itoa_base(va_arg(ap, int), 8, low, flags);
 	else if (format == 'u')
-		ft_putunslnbr(modifer, flags, &len_res);
+		ft_putunslnbr((unsigned int)va_arg(ap, intmax_t), flags, &len_res);
 	else if (format == 'x')
-		len_res += ft_itoa_base_int(modifer, 16, low, flags);
+		len_res += ft_itoa_base_int(va_arg(ap, int), 16, low, flags);
 	else if (format == 'X')
-		len_res += ft_itoa_base_int(modifer, 16, up, flags);
+		len_res += ft_itoa_base_int(va_arg(ap, int), 16, up, flags);
 	return (len_res);
 }
 

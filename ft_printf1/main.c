@@ -337,9 +337,30 @@ int	main()
 //	int len068 = printf("or:%S\n", L"米");
 //	int len68 = ft_printf("ft:%S\n", L"米");
 //	printf("68<must %d, my %d>\n", len068, len68);
-	int len069 = printf("or:%D\n", -1L);
-	int len69 = ft_printf("ft:%D\n", -1L);
-	printf("69<must %d, my %d>\n", len069, len69);
+//	int len069 = printf("or:%D\n", −9223372036854775807);
+//	int len69 = ft_printf("ft:%D\n", -9223372036854775807);
+//	printf("69<must %d, my %d>\n", len069, len69);
+//	int len069 = printf("or:%lo, %lo\n", 0, 4294967295);
+//	int len69 = ft_printf("ft:%lo, %lo\n", 0, 4294967295);
+//	printf("69<must %d, my %d>\n", len069, len69);
+//	int len070 = printf("or:%lc, %lc\n", L'暖', L'ح');
+//	int len70 = ft_printf("ft:%lc, %lc\n", L'暖', L'ح');
+//	printf("70<must %d, my %d>\n", len070, len70);
+//	int len071 = printf("%ls, %ls\n", L"暖炉", L"لحم خنزير");
+//	int len71 = ft_printf("%ls, %ls\n", L"暖炉", L"لحم خنزير");
+//	printf("71<must %d, my %d>\n", len071, len71);
+//	int len072 = printf("or:%llu, %llu\n", 0, 18446744073709551615);
+//	int len72 = ft_printf("ft:%llu, %llu\n", 0, 18446744073709551615);
+//	printf("72<must %d, my %d>\n", len072, len72);
+//	int len073 = printf("or:%hhS, %hhS\n", 0, L"米米");
+//	int len73 = ft_printf("ft:%hhS, %hhS\n", 0, L"米米");
+//	printf("73<must %d, my %d>\n", len073, len73);
+//	int len074 = printf("or:%ju, %ju\n", 0, 18446744073709551615);
+//	int len74 = ft_printf("ft:%ju, %ju\n", 0, 18446744073709551615);
+//	printf("74<must %d, my %d>\n", len074, len74);
+	int len075 = printf("or:%-15u\n", 245875980);
+	int len75 = ft_printf("ft:%-15u\n", 245875980);
+	printf("74<must %d, my %d>\n", len075, len75);
 	return (0);
 }
 

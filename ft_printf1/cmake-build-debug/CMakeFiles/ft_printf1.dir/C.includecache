@@ -16,11 +16,9 @@ unistd.h
 stdarg.h
 -
 
-/Users/amartyne/ft_printf1/main.c
+/Users/amartyne/ft_printf1/ft_putunsnbr.c
 ft_printf.h
 /Users/amartyne/ft_printf1/ft_printf.h
 stdio.h
--
-locale.h
 -
 

@@ -29,10 +29,8 @@ int specX2(char *format, int *i, va_list ap, a_struct flags)
 
 int specifier_jz(char *format, int *i, va_list ap, a_struct flags)
 {
-	size_t			z;
 	int				len_res;
 
-	z = 0;
 	(*i)++;
 	len_res = 0;
 	if (format[(*i) - 1] == 'j')
@@ -45,8 +43,16 @@ int specifier_jz(char *format, int *i, va_list ap, a_struct flags)
 				len_res += ft_itoa_max(va_arg(ap, uintmax_t), 16, low, flags);
 			else if (format[(*i)] == 'X')
 				len_res += ft_itoa_max(va_arg(ap, uintmax_t), 16, up, flags);
-			else
-				len_res += convert(format[(*i)], ap, flags, (unsigned long)va_arg(ap, uintmax_t));
+			else if (format[(*i)] == 'o')
+				len_res += ft_itoa_unslong((unsigned long)va_arg(ap, uintmax_t), 8, low, flags);
+			else if (format[(*i)] == 'u')
+				ft_putunslnbr((unsigned long)va_arg(ap, uintmax_t), flags, &len_res);
+			else if (format[(*i)] == 'O')
+				len_res +=  ft_itoa_base((unsigned long)va_arg(ap, uintmax_t), 8, up, flags);
+			else if (format[(*i)] == 'U')
+				ft_putunslnbr((unsigned long)va_arg(ap, uintmax_t), flags, &len_res);
+			else if (format[(*i)] == 'D')
+				ft_putlnbr((unsigned long)va_arg(ap, uintmax_t), flags, &len_res);
 		}
 	}
 	else if (format[(*i) - 1] == 'z')
@@ -55,8 +61,20 @@ int specifier_jz(char *format, int *i, va_list ap, a_struct flags)
 			ft_putnumber(va_arg(ap, size_t), flags, &len_res);
 		else if (format[(*i)])
 		{
-			z = va_arg(ap, size_t);
-			len_res += convert(format[(*i)],ap,  flags, z);
+			if (format[(*i)] == 'x')
+				len_res += ft_itoa_max(va_arg(ap, size_t), 16, low, flags);
+			else if (format[(*i)] == 'X')
+				len_res += ft_itoa_max(va_arg(ap, size_t), 16, up, flags);
+			else if (format[(*i)] == 'o')
+				len_res += ft_itoa_unslong(va_arg(ap, size_t), 8, low, flags);
+			else if (format[(*i)] == 'u')
+				ft_putunslnbr(va_arg(ap, size_t), flags, &len_res);
+			else if (format[(*i)] == 'O')
+				len_res +=  ft_itoa_base(va_arg(ap, size_t), 8, up, flags);
+			else if (format[(*i)] == 'U')
+				ft_putunslnbr(va_arg(ap, size_t), flags, &len_res);
+			else if (format[(*i)] == 'D')
+				ft_putlnbr(va_arg(ap, size_t), flags, &len_res);
 		}
 	}
 	else

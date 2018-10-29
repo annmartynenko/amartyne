@@ -46,7 +46,7 @@ int	ft_printf(char *format, ...)
 				//printf("form %c\n", format[i]);
 				flags = find_flag(format, &i, ap);
 				number(format[i],ap, flags, &len_res);
-				len_res += convert(format[i], ap, flags, 0);
+				len_res += convert(format[i], ap, flags);
 				word(format[i], ap, flags, &len_res);
 				len_res += specifier(format, &i, ap, flags);
 				if (format[i] == '%')

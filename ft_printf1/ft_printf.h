@@ -56,9 +56,8 @@ int			count_bin(unsigned int numb);
 void		unicode(wchar_t numb, a_struct flags, int mark, int *len_res);
 void		ft_putunslnbr(unsigned long int n, a_struct flags, int *len_res);
 void		uni_str(wchar_t *arr, a_struct flags, int *len_res);
-void		ft_putlnbr(long int n, a_struct flags, int *len_res);
-int		convert(char format, va_list ap, a_struct flags,\
-unsigned long modifer);
+void		ft_putlnbr(long long int n, a_struct flags, int *len_res);
+int		convert(char format, va_list ap, a_struct flags);
 a_struct 	find_flag(char *str, int *i, va_list ap);
 int			a_len(long long int n, int base, int len, long long *j);
 void		if_flags(a_struct flags, int len, int *len_res);
@@ -82,5 +81,7 @@ void		for_h(char *format, int *i, va_list ap, a_struct flags, int *len_res);
 void		for_l(char *format, int *i, va_list ap, a_struct flags, int *len_res);
 void		for_ll(char *format, int *i, va_list ap, a_struct flags, int *len_res);
 void		for_hh(char *format, int *i, va_list ap, a_struct flags, int *len_res);
+void		ft_putwchr(wchar_t *s, a_struct flags, int *len_res);
+int			ft_putwchar(wchar_t c);
 
 #endif
