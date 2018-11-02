@@ -358,9 +358,33 @@ int	main()
 //	int len074 = printf("or:%ju, %ju\n", 0, 18446744073709551615);
 //	int len74 = ft_printf("ft:%ju, %ju\n", 0, 18446744073709551615);
 //	printf("74<must %d, my %d>\n", len074, len74);
-	int len075 = printf("or:%-15u\n", 245875980);
-	int len75 = ft_printf("ft:%-15u\n", 245875980);
-	printf("74<must %d, my %d>\n", len075, len75);
+//	int len075 = printf("or:%-15u\n", 245875980);
+//	int len75 = ft_printf("ft:%-15u\n", 245875980);
+//	printf("74<must %d, my %d>\n", len075, len75);
+//	int len076 = printf("or:{%-30d}\n", 10000);
+//	int len76 = ft_printf("ft:{%-30d}\n", 10000);
+//	printf("76<must %d, my %d>\n", len076, len76);
+//	int len077 = printf("or:{%-15p}\n", 0);
+//	int len77 = ft_printf("ft:{%-15p}\n", 0);
+//	printf("77<must %d, my %d>\n", len077, len77);
+//	int len078 = printf("or:{%30S}\n", L"我是一只猫。");
+//	int len78 = ft_printf("ft:{%30S}\n", L"我是一只猫。");
+//	printf("78<must %d, my %d>\n", len078, len78);
+//	int len079 = printf("or:{%10R}\n");
+//	int len79 = ft_printf("ft:{%10R}\n");
+//	printf("79<must %d, my %d>\n", len079, len79);
+//	int len080 = printf("or:%010x\n", 542);
+//	int len80 = ft_printf("ft:%010x\n", 542);
+//	printf("80<must %d, my %d>\n", len080, len80);
+//	int len081 = printf("or:%5p\n", 0);
+//	int len81 = ft_printf("ft:%5p\n", 0);
+//	printf("81<must %d, my %d>\n", len081, len81);
+//	int len082 = printf("or:%#08x\n", 42);
+//	int len82 = ft_printf("ft:%#08x\n", 42);
+//	printf("82<must %d, my %d>\n", len082, len82);
+	int len083 = printf("or:%15.4S\n", L"我是一只猫。");
+	int len83 = ft_printf("ft:%15.4S\n", L"我是一只猫。");
+	printf("83<must %d, my %d>\n", len083, len83);
 	return (0);
 }
 

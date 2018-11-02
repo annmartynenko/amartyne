@@ -33,7 +33,7 @@ int	fill(unsigned base, unsigned long long n, long long j, int letter)
 		ft_memcpy(symbols, "0123456789ABCDEF", 16);
 	else
 		ft_memcpy(symbols, "0123456789abcdef", 16);
-	if (letter == P)
+	if (letter == 3)
 		len_res += ft_putstr("0x");
 	while (j >= 1)
 	{
@@ -67,9 +67,16 @@ int	ft_itoa_base(long long n, int base, int letter, a_struct flags)
 	len_res = 0;
 	nb = n;
 	len = unsigned_len(nb, (unsigned) base, 0, &j);
+	if (n == 0 && letter != P)
+		letter = -1;
+	if (letter == P && flags.minus)
+	{
+		len += 2;
+		letter = 3;
+	}
 	len_res += if_flags_ito(flags, len, base, letter);
 	if (flags.precision != 0)
-		len_res += fill((unsigned) base, nb, j, letter);
+		len_res += fill((unsigned)base, nb, j, letter);
 	for_minus(flags, len, base, &len_res);
 	return (len_res);
 }

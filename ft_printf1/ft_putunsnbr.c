@@ -39,9 +39,10 @@ void ft_putunslnbr(unsigned long int n, a_struct flags, int *len_res)
 	len = 0;
 	len = a_len(n, 10, len, &j);
 	if_flags(flags, len, len_res);
-	ft_putn(n, len_res);
+	if (n != 0 || flags.precision != 0)
+		ft_putn(n, len_res);
 	if (flags.minus && flags.width > len)
-		(*len_res) += n_time((flags.width - len), &ft_putchar, ' ');
+		n_time((flags.width - len), len_res, ' ');
 }
 
 void ft_putunsnbr(unsigned int n, a_struct flags, int *len_res)
@@ -61,7 +62,7 @@ void ft_putunsnbr(unsigned int n, a_struct flags, int *len_res)
 		(*len_res) += ft_putchar((char)(n % 10 + '0'));
 	}
 	if (flags.minus && flags.width > len)
-		(*len_res) += n_time((flags.width - len), &ft_putchar, ' ');
+		n_time((flags.width - len), len_res, ' ');
 }
 
 void ft_putlnbr(long long int n, a_struct flags, int *len_res)
@@ -101,6 +102,6 @@ void ft_putlnbr(long long int n, a_struct flags, int *len_res)
 			len++;
 		if (flags.space)
 			len++;
-		(*len_res) += n_time((flags.width - len), &ft_putchar, ' ');
+		n_time((flags.width - len), len_res, ' ');
 	}
 }

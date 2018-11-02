@@ -22,16 +22,27 @@ void ft_putstring(char const *s, a_struct flags, int *len_res)
 	if (s)
 	{
 		//printf("\nlen %d, w %d, pr %d\n", len, flags.width, flags.precision);
-		if (flags.width > len && !flags.minus && flags.precision == -1)
-			(*len_res) += n_time((flags.width - len), &ft_putchar, ' ');
+		if (flags.width > len && !flags.minus && flags.precision == -1 &&\
+		flags.nul)
+			n_time((flags.width - len), len_res, '0');
+		else if (flags.width > len && !flags.minus && flags.precision == -1)
+			n_time((flags.width - len), len_res, ' ');
+		else if (flags.precision < flags.width && flags.precision > len &&\
+		flags.precision != -1 && !flags.minus)
+			n_time((flags.width - len), len_res, ' ');
+		else if (flags.precision < flags.width && flags.precision < len &&\
+		flags.precision != -1 && !flags.minus)
+			n_time((flags.width - flags.precision), len_res, ' ');
+		else if (flags.precision > flags.width && flags.width > len &&\
+		flags.precision != -1 && !flags.minus)
+			n_time((flags.width - len), len_res, ' ');
 		else if (flags.width > flags.precision && !flags.minus &&\
 		flags.precision != -1)
 		{
 			if (len == 0)
-				(*len_res) += n_time((flags.width), &ft_putchar, ' ');
+				n_time((flags.width), len_res, ' ');
 			else
-				(*len_res) += n_time((flags.width - flags.precision),\
-			&ft_putchar, ' ');
+				n_time((flags.width - flags.precision), len_res, ' ');
 		}
 		while (s[i] != '\0')
 		{
@@ -41,15 +52,13 @@ void ft_putstring(char const *s, a_struct flags, int *len_res)
 			i++;
 		}
 		if (flags.width > len && flags.minus && flags.precision == -1)
-			(*len_res) += n_time((flags.width - len), &ft_putchar, ' ');
+			n_time((flags.width - len), len_res, ' ');
 		else if (flags.width > flags.precision && flags.minus)
 		{
 			if (flags.precision <= len && flags.precision != -1)
-				(*len_res) += n_time((flags.width - flags.precision),\
-				&ft_putchar, ' ');
+				n_time((flags.width - flags.precision), len_res, ' ');
 			else if (flags.precision > len && flags.precision != -1)
-				(*len_res) += n_time(flags.width,\
-				&ft_putchar, ' ');
+				n_time(flags.width, len_res, ' ');
 		}
 	}
 	else

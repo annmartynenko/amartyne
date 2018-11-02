@@ -46,7 +46,7 @@ size_t n);
 int			ft_isdigit(int c);
 int			ft_atoi(const char *str);
 int			ft_isalpha(int c);
-int			n_time(int i, int (*f)(char c), char str);
+void n_time(int i, int *len_res, char str);
 void		ft_putunsnbr(unsigned int n, a_struct flags, int *len_res);
 int			ft_itoa_base(long long int n, int base, int letter, a_struct flags);
 void		word(char format, va_list ap, a_struct flags, int *len_res);

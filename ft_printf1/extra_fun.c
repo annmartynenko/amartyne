@@ -16,9 +16,11 @@ void uni_str(wchar_t *arr, a_struct flags, int *len_res)
 {
 	int i;
 	int len;
+	int odd;
 
 	i = 0;
 	len = 0;
+	odd = 0;
 	if (arr)
 	{
 		while (arr[i])
@@ -28,31 +30,39 @@ void uni_str(wchar_t *arr, a_struct flags, int *len_res)
 		}
 		//(*len_res) += len;
 		i = 0;
-		if (flags.width > len && !flags.minus && !flags.nul)
-			(*len_res) += n_time((flags.width - len), &ft_putchar, ' ');
+		if (flags.width > len && !flags.minus && flags.nul)
+			n_time((flags.width - len), len_res, '0');
+		else if (flags.width > len && !flags.minus && !flags.nul)
+			n_time((flags.width - len), len_res, ' ');
 		while (arr[i])
+		{
 			unicode(arr[i++], flags, 2, len_res);
+		}
 		if (flags.width > len && flags.minus && !flags.nul)
-			(*len_res) += n_time((flags.width - len), &ft_putchar, ' ');
+			n_time((flags.width - len), len_res, ' ');
 	}
 	else
 		*len_res += ft_putstr("(null)");
 }
 
-int n_time(int i, int (*f)(char), char str)
+void	n_time(int i, int *len_res, char str)
 {
 	int j;
+	char *ch;
 
+	ch = NULL;
 	j = 0;
-	while(j < i)
+	if (i > 0)
 	{
-		f(str);
-		j++;
+		ch = (char *)malloc(sizeof(char) * i + 1);
+		while (j < i)
+			ch[j++] = str;
+		ch[j] = '\0';
+		*len_res += ft_putstr(ch);
 	}
-	return (j);
 }
 
-int len_unco(int size)
+int	len_unco(int size)
 {
 	int len;
 

@@ -49,12 +49,12 @@ int	ft_printf(char *format, ...)
 				len_res += convert(format[i], ap, flags);
 				word(format[i], ap, flags, &len_res);
 				len_res += specifier(format, &i, ap, flags);
-				if (format[i] == '%')
+				if (format[i] == '%' || !valid(format[i]))
 				{
 					not_spec(flags, &len_res);
-					len_res += ft_putchar('%');
+					len_res += ft_putchar(format[i]);
 					if (flags.width && flags.minus)
-						len_res += n_time((flags.width - 1), &ft_putchar, ' ');
+						n_time((flags.width - 1), &len_res, ' ');
 				}
 				else if (!valid(format[i]))
 					len_res += ft_putchar(format[i]);

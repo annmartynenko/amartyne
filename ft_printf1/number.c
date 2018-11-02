@@ -70,11 +70,13 @@ void    word(char format, va_list ap, a_struct flags, int *len_res)
 		uni_str(va_arg(ap, wchar_t*), flags, len_res);
 	else if (format == 'c')
 	{
-		if (flags.width > 1 && !flags.minus)
-			(*len_res) += n_time((flags.width - 1), &ft_putchar, ' ');
+		if (flags.width > 1 && !flags.minus && !flags.nul)
+			n_time((flags.width - 1), len_res, ' ');
+		else if (flags.width > 1 && !flags.minus && flags.nul)
+			n_time((flags.width - 1), len_res, '0');
 		(*len_res) += ft_putchar((char)va_arg(ap, int));
 		if (flags.width > 1 && flags.minus)
-			(*len_res) += n_time((flags.width - 1), &ft_putchar, ' ');
+			n_time((flags.width - 1), len_res, ' ');
 	}
 	else if (format == 'C')
 		unicode(va_arg(ap, wchar_t), flags, unco, len_res);

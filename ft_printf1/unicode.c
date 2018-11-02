@@ -95,7 +95,7 @@ void unicode(wchar_t numb, a_struct flags, int mark, int *len_res)
 	if (size == 0)
 		size = 1;
 	if (flags.width > len && !flags.minus && !flags.nul && mark == unco)
-		(*len_res) += n_time((flags.width - len), &ft_putchar, ' ');
+		n_time((flags.width - len), len_res, ' ');
 	if (size <= 7)
 		*len_res += ft_putchar(value);
 	else if (size <= 11)
@@ -105,6 +105,6 @@ void unicode(wchar_t numb, a_struct flags, int mark, int *len_res)
 	else
 		*len_res += four_bin(value);
 	if (flags.width > len && flags.minus && !flags.nul && mark == unco)
-		(*len_res) += n_time((flags.width - len), &ft_putchar, ' ');
+		n_time((flags.width - len), len_res, ' ');
 }
 

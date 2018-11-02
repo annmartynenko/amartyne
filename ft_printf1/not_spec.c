@@ -15,5 +15,5 @@
 void not_spec(a_struct flags, int *len_res)
 {
 	if (flags.width && !flags.minus)
-		(*len_res) += n_time((flags.width - 1), &ft_putchar, ' ');
+		n_time((flags.width - 1), len_res, ' ');
 }

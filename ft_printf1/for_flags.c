@@ -25,9 +25,9 @@ void for_minus(a_struct flags, int len, int base, int *len_res)
 	if (flags.minus && flags.width > len)
 	{
 		if (flags.width > flags.precision && flags.precision != -1)
-			(*len_res) += n_time((flags.width - flags.precision - dot), &ft_putchar, ' ');
+			n_time((flags.width - flags.precision - dot), len_res, ' ');
 		else if (flags.width && flags.precision == -1)
-			(*len_res) += n_time((flags.width - len - dot), &ft_putchar, ' ');
+			n_time((flags.width - len - dot), len_res, ' ');
 	}
 }
 
@@ -39,20 +39,23 @@ int print_space(a_struct flags, int len, int base, int letter)
 	if (flags.hash && base == 8)
 	{
 		if (!flags.minus)
-			len_res += n_time((flags.width - len - 1), &ft_putchar, ' ');
-		len_res += ft_putchar('0');
+			n_time((flags.width - len - 1), &len_res, ' ');
+		if (letter != -1)
+			len_res += ft_putchar('0');
 	}
 	else if ((flags.hash && base == 16) || letter == P)
 	{
 		if (!flags.minus)
-			len_res += n_time((flags.width - len - 2), &ft_putchar, ' ');
+			n_time((flags.width - len - 2), &len_res, ' ');
 		if (letter == low)
 			len_res += ft_putstr("0x");
 		else if (letter == up)
 			len_res += ft_putstr("0X");
+		else if (letter == P)
+			len_res += ft_putstr("0x");
 	}
 	else
-		len_res += n_time((flags.width - len), &ft_putchar, ' ');
+		n_time((flags.width - len), &len_res, ' ');
 	return (len_res);
 }
 
@@ -64,7 +67,7 @@ int print_nul(a_struct flags, int len, int base, int letter)
 	if (flags.hash && base == 8)
 	{
 		len_res += ft_putchar('0');
-		len_res += n_time((flags.width - len - 1), &ft_putchar, '0');
+		n_time((flags.width - len - 1), &len_res, '0');
 	}
 	else if (flags.hash && base == 16)
 	{
@@ -73,12 +76,17 @@ int print_nul(a_struct flags, int len, int base, int letter)
 		else if (letter == up)
 			len_res += ft_putstr("0X");
 		if (!flags.minus)
-			len_res += n_time((flags.width - len - 2), &ft_putchar, '0');
+			n_time((flags.width - len - 2), &len_res, '0');
+	}
+	else if (letter == P)
+	{
+		len_res += ft_putstr("0x");
+		n_time((flags.width - len - 2), &len_res, '0');
 	}
 	else if (flags.precision != -1)
-		len_res += n_time((flags.precision - len), &ft_putchar, '0');
+		n_time((flags.precision - len), &len_res, '0');
 	else
-		len_res += n_time((flags.width - len), &ft_putchar, '0');
+		n_time((flags.width - len), &len_res, '0');
 	return (len_res);
 }
 
@@ -90,7 +98,7 @@ int print_nul_pr(a_struct flags, int len, int base, int letter)
 	if (flags.hash && base == 8)
 	{
 		len_res += ft_putchar('0');
-		len_res += n_time((flags.precision - len), &ft_putchar, '0');
+		n_time((flags.precision - len), &len_res, '0');
 	}
 	else if (flags.hash && base == 16)
 	{
@@ -98,10 +106,10 @@ int print_nul_pr(a_struct flags, int len, int base, int letter)
 			len_res += ft_putstr("0x");
 		else if (letter == up)
 			len_res += ft_putstr("0X");
-		len_res += n_time((flags.precision - len), &ft_putchar, '0');
+		n_time((flags.precision - len), &len_res, '0');
 	}
 	else
-		len_res += n_time((flags.precision - len), &ft_putchar, '0');
+		n_time((flags.precision - len), &len_res, '0');
 	return(len_res);
 }
 
@@ -110,24 +118,26 @@ int if_flags_ito(a_struct flags, int len, int base, int letter)
 	int len_res;
 
 	len_res = 0;
+	if(letter == P && !flags.minus && !flags.nul && !flags.width)
+		len_res += ft_putstr("0x");
 	if (flags.width > len && flags.precision != -1 && \
 	flags.width > flags.precision && !flags.hash && flags.precision >= len &&\
 	!flags.minus)
 	{
-		len_res += n_time((flags.width - flags.precision), &ft_putchar, ' ');
-		len_res += n_time((flags.precision - len), &ft_putchar, '0');
+		n_time((flags.width - flags.precision), &len_res, ' ');
+		n_time((flags.precision - len), &len_res, '0');
 	}
 	else if (flags.width > len && flags.precision != -1 &&\
 	flags.width > flags.precision && !flags.hash && !flags.minus)
 	{
 		if (flags.precision == 0)
 			len = 0;
-		len_res += n_time((flags.width - len), &ft_putchar, ' ');
+		n_time((flags.width - len), &len_res, ' ');
 	}
 	else if (flags.width > len && flags.width <= flags.precision &&\
 	!flags.hash)
-		len_res += n_time((flags.precision - len), &ft_putchar, '0');
-	else if (flags.width > len && flags.nul && !flags.minus)
+		n_time((flags.precision - len), &len_res, '0');
+	else if (flags.width > len && flags.nul && !flags.minus) //+
 		len_res += print_nul(flags, len, base, letter);
 	else if (flags.width > len && !flags.minus && !flags.nul &&\
 	flags.precision == -1)
@@ -138,7 +148,7 @@ int if_flags_ito(a_struct flags, int len, int base, int letter)
 	else if (flags.precision != -1 && flags.precision > flags.width &&\
 	flags.hash) //g
 		len_res += print_nul_pr(flags, len, base, letter);
-	else if (flags.hash && flags.precision == -1)
+	else if (flags.hash && flags.precision == -1) // #o
 		len_res += print_space(flags, len, base, letter);
 	else if (flags.precision != -1)
 		len_res += print_nul(flags, len, base, letter);
