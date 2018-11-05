@@ -102,6 +102,9 @@
 		<Unit filename="/Users/amartyne/ft_printf1/for_flags.c">
 			<Option target="ft_printf1"/>
 		</Unit>
+		<Unit filename="/Users/amartyne/ft_printf1/for_p.c">
+			<Option target="ft_printf1"/>
+		</Unit>
 		<Unit filename="/Users/amartyne/ft_printf1/ft_arrfree.c">
 			<Option target="ft_printf1"/>
 		</Unit>

@@ -24,6 +24,7 @@ int	main()
     int *a;
     int e = 5;
     a = &e;
+    long int LONGMIN  = –2147483648;
 	//int 	s[5] = {2222, 2222, 945, 0, 3000};
 	short f = 26;
 	r = (wchar_t*)malloc(sizeof(wchar_t) * 4);
@@ -35,8 +36,8 @@ int	main()
     int len1;
     int len2;
 //	ft_printf("%d\n", count_bin(k1));
-//	printf("1original :%015p. \n", p);
-//	ft_printf("1ft_printf:%015p. \n", p);
+//	printf("1original :%p. \n", p);
+//	ft_printf("1ft_printf:%p. \n", p);
 //	printf("2original :% 12.*D. \n",  10, 123456789);
 //	ft_printf("2ft_printf:% 12.*D. \n", 10, 123456789);
 //	printf("3original :%0*.*D. \n", 10, 12, 123456789);
@@ -382,9 +383,48 @@ int	main()
 //	int len082 = printf("or:%#08x\n", 42);
 //	int len82 = ft_printf("ft:%#08x\n", 42);
 //	printf("82<must %d, my %d>\n", len082, len82);
-	int len083 = printf("or:%15.4S\n", L"我是一只猫。");
-	int len83 = ft_printf("ft:%15.4S\n", L"我是一只猫。");
-	printf("83<must %d, my %d>\n", len083, len83);
+//	int len083 = printf("or:%15.4S\n", L"我是一只猫。"); //i dont know
+//	int len83 = ft_printf("ft:%15.4S\n", L"我是一只猫。");
+//	printf("83<must %d, my %d>\n", len083, len83);
+//	int len084 = printf("%.0p, %.p\n", 0, 0); //HERE
+//	int len84 = ft_printf("%.0p, %.p\n", 0, 0);
+//	printf("84<must %d, my %d>\n", len084, len84);
+//	int len085 = printf("%.5p\n", 0);
+//	int len85 = ft_printf("%.5p\n", 0);
+//	printf("85<must %d, my %d>\n", len085, len85);
+//	int len086 = printf("%9.2p\n", 1234); //i dont know
+//	int len86 = ft_printf("%9.2p\n", 1234);
+//	printf("86<must %d, my %d>\n", len086, len86);
+//	int len087 = printf("%9.2p\n", 1234567);
+//	int len87 = ft_printf("%9.2p\n", 1234567);
+//	printf("87<must %d, my %d>\n", len087, len87);
+//	int len088 = printf("%2.9p\n", 1234);
+//	int len88 = ft_printf("%2.9p\n", 1234);
+//	printf("88<must %d, my %d>\n", len088, len88);
+//	int len089 = printf("%2.9p\n", 1234567);
+//	int len89 = ft_printf("%2.9p\n", 1234567);
+//	printf("89<must %d, my %d>\n", len089, len89);
+//	int len090 = printf("%9.2p\n", 1234);
+//	int len90 = ft_printf("%9.2p\n", 1234);
+//	printf("90<must %d, my %d>\n", len090, len90);
+//	int len091 = printf("%9.2p\n", 1234567);
+//	int len91 = ft_printf("%9.2p\n", 1234567);
+//	printf("91<must %d, my %d>\n", len091, len91);
+//	int len092 = printf("% p|%+p\n", 42, 42);
+//	int len92 = ft_printf("% p|%+p\n", 42, 42);
+//	printf("92<must %d, my %d>\n", len092, len92);
+//	int len093 = printf("%o, %ho, %hho\n", -42, -42, -42);
+//	int len93 = ft_printf("%o, %ho, %hho\n", -42, -42, -42);
+//	printf("93<must %d, my %d>\n", len093, len93);
+//	int len094 = printf("%o\n", 2147483647);
+//	int len94 = ft_printf("%o\n", 2147483647);
+//	printf("94<must %d, my %d>\n", len094, len94);
+	int len095 = printf("%O",LONGMIN);
+	int len95 = ft_printf("%O", LONGMIN);
+	printf("95<must %d, my %d>\n", len095, len95);
+//	int len096 = printf("%#.o\n", 42);
+//	int len96 = ft_printf("%#.o\n", 42);
+//	printf("96<must %d, my %d>\n", len096, len96);
 	return (0);
 }
 

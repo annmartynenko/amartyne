@@ -23,20 +23,24 @@ void uni_str(wchar_t *arr, a_struct flags, int *len_res)
 	odd = 0;
 	if (arr)
 	{
-		while (arr[i])
+		while (arr[odd])
 		{
 			len += len_unco(count_bin((wchar_t) arr[i]));
-			i++;
+			odd++;
 		}
 		//(*len_res) += len;
-		i = 0;
 		if (flags.width > len && !flags.minus && flags.nul)
 			n_time((flags.width - len), len_res, '0');
 		else if (flags.width > len && !flags.minus && !flags.nul)
 			n_time((flags.width - len), len_res, ' ');
+		else if (flags.width)
+			n_time((flags.width), len_res, ' ');
 		while (arr[i])
 		{
+//			if (flags.precision == odd)
+//				break;
 			unicode(arr[i++], flags, 2, len_res);
+			odd--;
 		}
 		if (flags.width > len && flags.minus && !flags.nul)
 			n_time((flags.width - len), len_res, ' ');

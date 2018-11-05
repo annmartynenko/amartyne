@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/amartyne/ft_printf1/find_flag.c" "/Users/amartyne/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/find_flag.c.o"
   "/Users/amartyne/ft_printf1/for_add.c" "/Users/amartyne/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/for_add.c.o"
   "/Users/amartyne/ft_printf1/for_flags.c" "/Users/amartyne/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/for_flags.c.o"
+  "/Users/amartyne/ft_printf1/for_p.c" "/Users/amartyne/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/for_p.c.o"
   "/Users/amartyne/ft_printf1/ft_arrfree.c" "/Users/amartyne/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/ft_arrfree.c.o"
   "/Users/amartyne/ft_printf1/ft_atoi.c" "/Users/amartyne/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/ft_atoi.c.o"
   "/Users/amartyne/ft_printf1/ft_isalpha.c" "/Users/amartyne/ft_printf1/cmake-build-debug/CMakeFiles/ft_printf1.dir/ft_isalpha.c.o"

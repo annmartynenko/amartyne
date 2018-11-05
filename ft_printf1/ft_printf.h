@@ -83,5 +83,6 @@ void		for_ll(char *format, int *i, va_list ap, a_struct flags, int *len_res);
 void		for_hh(char *format, int *i, va_list ap, a_struct flags, int *len_res);
 void		ft_putwchr(wchar_t *s, a_struct flags, int *len_res);
 int			ft_putwchar(wchar_t c);
+int			for_p(a_struct flags, int len);
 
 #endif

@@ -231,6 +231,33 @@ for_flags.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf1.dir/build.make CMakeFiles/ft_printf1.dir/for_flags.c.s
 .PHONY : for_flags.c.s
 
+for_p.o: for_p.c.o
+
+.PHONY : for_p.o
+
+# target to build an object file
+for_p.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf1.dir/build.make CMakeFiles/ft_printf1.dir/for_p.c.o
+.PHONY : for_p.c.o
+
+for_p.i: for_p.c.i
+
+.PHONY : for_p.i
+
+# target to preprocess a source file
+for_p.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf1.dir/build.make CMakeFiles/ft_printf1.dir/for_p.c.i
+.PHONY : for_p.c.i
+
+for_p.s: for_p.c.s
+
+.PHONY : for_p.s
+
+# target to generate assembly for a file
+for_p.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf1.dir/build.make CMakeFiles/ft_printf1.dir/for_p.c.s
+.PHONY : for_p.c.s
+
 ft_arrfree.o: ft_arrfree.c.o
 
 .PHONY : ft_arrfree.o
@@ -1062,6 +1089,9 @@ help:
 	@echo "... for_flags.o"
 	@echo "... for_flags.i"
 	@echo "... for_flags.s"
+	@echo "... for_p.o"
+	@echo "... for_p.i"
+	@echo "... for_p.s"
 	@echo "... ft_arrfree.o"
 	@echo "... ft_arrfree.i"
 	@echo "... ft_arrfree.s"

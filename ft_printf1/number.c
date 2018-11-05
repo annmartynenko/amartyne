@@ -52,7 +52,7 @@ int    convert(char format, va_list ap, a_struct flags)
 
 	len_res = 0;
 	if (format == 'o')
-		len_res += ft_itoa_base(va_arg(ap, int), 8, low, flags);
+		len_res += ft_itoa_base_int(va_arg(ap, int), 8, low, flags);
 	else if (format == 'u')
 		ft_putunslnbr((unsigned int)va_arg(ap, intmax_t), flags, &len_res);
 	else if (format == 'x')

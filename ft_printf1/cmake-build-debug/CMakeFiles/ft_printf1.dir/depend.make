@@ -13,6 +13,9 @@ CMakeFiles/ft_printf1.dir/for_add.c.o: ../ft_printf.h
 CMakeFiles/ft_printf1.dir/for_flags.c.o: ../for_flags.c
 CMakeFiles/ft_printf1.dir/for_flags.c.o: ../ft_printf.h
 
+CMakeFiles/ft_printf1.dir/for_p.c.o: ../for_p.c
+CMakeFiles/ft_printf1.dir/for_p.c.o: ../ft_printf.h
+
 CMakeFiles/ft_printf1.dir/ft_arrfree.c.o: ../ft_arrfree.c
 CMakeFiles/ft_printf1.dir/ft_arrfree.c.o: ../ft_printf.h
 

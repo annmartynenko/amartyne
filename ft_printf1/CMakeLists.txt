@@ -42,4 +42,5 @@ add_executable(ft_printf1
         not_spec.c
         valid.c
         ft_putint.c
-        for_add.c)
+        for_add.c
+        for_p.c)
