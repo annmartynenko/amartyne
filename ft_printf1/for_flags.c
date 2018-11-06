@@ -98,6 +98,7 @@ int print_nul_pr(a_struct flags, int len, int base, int letter)
 	if (flags.hash && base == 8)
 	{
 		len_res += ft_putchar('0');
+		len++;
 		n_time((flags.precision - len), &len_res, '0');
 	}
 	else if (flags.hash && base == 16)

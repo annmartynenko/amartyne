@@ -13,7 +13,7 @@
 #include "ft_printf.h"
 #include <stdio.h>
 
-int	fill_int(unsigned int base, unsigned int n, unsigned int j, int letter)
+int		fill_int(unsigned int base, unsigned int n, unsigned int j, int letter)
 {
 	char	symbols[16];
 	int		len_res;
@@ -49,7 +49,7 @@ int		lenght(unsigned int n, unsigned int base, unsigned int len, unsigned int  *
 	return (len);
 }
 
-int	ft_itoa_base_int(unsigned int n, unsigned int base, int letter, a_struct flags)
+int		ft_itoa_base_int(unsigned int n, unsigned int base, int letter, a_struct flags)
 {
 	unsigned int			len;
 	unsigned int	nb;

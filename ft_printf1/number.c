@@ -21,7 +21,7 @@ void    number(char format, va_list ap, a_struct flags, int *len_res)
 	else if (format == 'U')
 		ft_putunslnbr(va_arg(ap, unsigned long int), flags, len_res);
 	else if (format == 'O')
-		(*len_res) +=  ft_itoa_base(va_arg(ap, unsigned long int), 8, up, flags);
+		(*len_res) +=  ft_itoa_unslong(va_arg(ap, unsigned long int), 8, up, flags);
 	else if (format == 'p')
 		(*len_res) +=  ft_itoa_base(va_arg(ap, long long), 16, P, flags);
 }

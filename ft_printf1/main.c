@@ -24,7 +24,7 @@ int	main()
     int *a;
     int e = 5;
     a = &e;
-    long int LONGMIN  = –2147483648;
+    unsigned long int LONGMIN  = -2147483648;
 	//int 	s[5] = {2222, 2222, 945, 0, 3000};
 	short f = 26;
 	r = (wchar_t*)malloc(sizeof(wchar_t) * 4);
@@ -386,8 +386,8 @@ int	main()
 //	int len083 = printf("or:%15.4S\n", L"我是一只猫。"); //i dont know
 //	int len83 = ft_printf("ft:%15.4S\n", L"我是一只猫。");
 //	printf("83<must %d, my %d>\n", len083, len83);
-//	int len084 = printf("%.0p, %.p\n", 0, 0); //HERE
-//	int len84 = ft_printf("%.0p, %.p\n", 0, 0);
+//	int len084 = printf("%.0O, %.o\n", 0, 0); //HERE
+//	int len84 = ft_printf("%.0O, %.o\n", 0, 0);
 //	printf("84<must %d, my %d>\n", len084, len84);
 //	int len085 = printf("%.5p\n", 0);
 //	int len85 = ft_printf("%.5p\n", 0);
@@ -419,12 +419,33 @@ int	main()
 //	int len094 = printf("%o\n", 2147483647);
 //	int len94 = ft_printf("%o\n", 2147483647);
 //	printf("94<must %d, my %d>\n", len094, len94);
-	int len095 = printf("%O",LONGMIN);
-	int len95 = ft_printf("%O", LONGMIN);
-	printf("95<must %d, my %d>\n", len095, len95);
+//	int len095 = printf("%O\n",LONGMIN);
+//	int len95 = ft_printf("%O\n", LONGMIN);
+//	printf("95<must %d, my %d>\n", len095, len95);
 //	int len096 = printf("%#.o\n", 42);
 //	int len96 = ft_printf("%#.o\n", 42);
 //	printf("96<must %d, my %d>\n", len096, len96);
+//	int len097 = printf("{%05.s}\n", 0);
+//	int len97 = ft_printf("{%05.s}\n", 0);
+//	printf("97<must %d, my %d>\n", len097, len97);
+//	int len098 = printf("{%05.%}\n", 0);
+//	int len98 = ft_printf("{%05.%}\n", 0);
+//	printf("98<must %d, my %d>\n", len098, len98);
+//	int len099 = printf("{%05.Z}\n", 0);
+//	int len99 = ft_printf("{%05.Z}\n", 0);
+//	printf("99<must %d, my %d>\n", len099, len99);
+//	int len0100 = printf("%#.3o\n", 1);
+//	int len100 = ft_printf("%#.3o\n", 1);
+//	printf("100<must %d, my %d>\n", len0100, len100);
+	int len0101 = printf("{%05.S}\n", L"42 c est cool"); //must 0000
+	int len101 = ft_printf("{%05.S}\n", L"42 c est cool"); // my 42 c est cool
+	printf("101<must %d, my %d>\n", len0101, len101);
+//	int len0102 = printf("{%05p}\n", 0);
+//	int len102 = ft_printf("{%05p}\n", 0);
+//	printf("102<must %d, my %d>\n", len0102, len102);
+//	int len0103 = printf("{%-30S}\n", L"我是一只猫。");
+//	int len103 = ft_printf("{%-30S}\n", L"我是一只猫。");
+//	printf("103<must %d, my %d>\n", len0103, len103);
 	return (0);
 }
 

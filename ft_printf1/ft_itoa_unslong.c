@@ -61,7 +61,8 @@ int	ft_itoa_unslong(unsigned long n, unsigned long base, int letter, a_struct fl
 	nb = n;
 	len = lenght_uns(nb, base, 0, &j);
 	len_res += if_flags_ito(flags, len, base, letter);
-	len_res += fill_uns(base, nb, j, letter);
+	if (flags.precision != 0)
+		len_res += fill_uns(base, nb, j, letter);
 	for_minus(flags, len, base, &len_res);
 	return (len_res);
 }

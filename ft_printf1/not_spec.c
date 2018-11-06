@@ -14,6 +14,8 @@
 #include <stdio.h>
 void not_spec(a_struct flags, int *len_res)
 {
-	if (flags.width && !flags.minus)
+	if (flags.width && !flags.minus && !flags.nul)
 		n_time((flags.width - 1), len_res, ' ');
+	else if (flags.width && flags.nul && !flags.minus)
+		n_time((flags.width - 1), len_res, '0');
 }

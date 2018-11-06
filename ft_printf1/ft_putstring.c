@@ -19,7 +19,7 @@ void ft_putstring(char const *s, a_struct flags, int *len_res)
 
 	i = 0;
 	len = (int)ft_strlen(s);
-	if (s)
+	if (s != NULL)
 	{
 		//printf("\nlen %d, w %d, pr %d\n", len, flags.width, flags.precision);
 		if (flags.width > len && !flags.minus && flags.precision == -1 &&\
@@ -61,7 +61,9 @@ void ft_putstring(char const *s, a_struct flags, int *len_res)
 				n_time(flags.width, len_res, ' ');
 		}
 	}
-	else
+	else if (s == 0 && flags.width)
+		n_time(flags.width, len_res, '0');
+	else if (!flags.width)
 		*len_res += ft_putstr("(null)");
 }
 

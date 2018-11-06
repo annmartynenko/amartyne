@@ -39,5 +39,15 @@ int	for_p(a_struct flags, int len)
 	else if (flags.precision == -1 && !flags.width && !flags.hash &&\
 	!flags.minus && !flags.nul)
 		len_res += ft_putstr("0x");
+	else if (flags.width && flags.nul)
+	{
+		len_res += ft_putstr("0x");
+		n_time(flags.width - len - 2, &len_res, '0');
+	}
+	else if (flags.width)
+	{
+		n_time(flags.width - len - 2, &len_res, ' ');
+		len_res += ft_putstr("0x");
+	}
 	return (len_res);
 }
