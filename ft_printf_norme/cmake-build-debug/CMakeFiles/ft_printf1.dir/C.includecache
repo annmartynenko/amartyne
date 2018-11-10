@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/amartyne/ft_printf1/extra_fun.c
+ft_printf.h
+/Users/amartyne/ft_printf1/ft_printf.h
+
+/Users/amartyne/ft_printf1/find_flag.c
+ft_printf.h
+/Users/amartyne/ft_printf1/ft_printf.h
+stdio.h
+-
+
+/Users/amartyne/ft_printf1/ft_printf.h
+unistd.h
+-
+stdlib.h
+-
+unistd.h
+-
+stdarg.h
+-
+
